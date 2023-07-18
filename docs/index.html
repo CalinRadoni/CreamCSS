@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <meta name="description" content="Page description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modern-normalize.css">
+  <link rel="stylesheet" href="cream.css">
+  <link rel="stylesheet" href="cream-extra.css">
+</head>
+<body>
+  <header>
+    <h1>Cream CSS framework</h1>
+    <h2>Lightweight, Classless<sup>*</sup>, HTML Semantic Elements, Responsive, Mobile First, ...</h2>
+    <h3>forget the default ugly formatting !</h3>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Settings</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Typography</h2>
+      </header>
+      <section>
+        <h1>Header level 1</h1>
+        <h2>Header level 2</h2>
+        <h3>Header level 3</h3>
+        <h4>Header level 4</h4>
+        <h5>Header level 5</h5>
+        <h6>Header level 6</h6>
+        <p>
+          The purpose of this framework is to be used as a starting point for web pages. It is <b>Lightweight</b> and <b>Classless</b>
+          so it can be used by adding to a page's header:
+        </p>
+        <pre><code>
+&lt;link rel="stylesheet" href="cream.css"&gt;
+        </code></pre>
+        <p>to turn the default ugly formatting into a beautiful page.</p>
+        <p>The framework was designed by following <b>some</b> design patterns from:</p>
+        <ul>
+          <li>Google's <a href="https://m3.material.io/">Material Design 3</a></li>
+          <li>GitHub's <a href="https://primer.style/design">Primer Design System</a></li>
+          <li>Apple's <a href="https://developer.apple.com/design/human-interface-guidelines">Human Interface Guidelines</a></li>
+        </ul>
+        <p>To be sure that the look is the same in different browsers <a href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> should be included before <a href="">CreamCSS</a>. <code>modern-normalize</code> can be
+        downloaded from GitHub, use the minified version for production.</p>
+        <p>To continue with typography, here follows a horizontal line and a blockquote.</p>
+        <hr/>
+        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas doloribus esse, enim, consequatur aliquam, saepe porro mollitia molestias recusandae itaque quibusdam? Nihil tempore provident deserunt nemo ea odit voluptates.</blockquote>
+        <p>To not overcomplicate the code I have created a class, <code>required</code>, to style the labels of required inputs.</p>
+        <p>There are some custom HTML semantic elements in the <code>cream-extra.css</code> file:</p>
+        <ul>
+          <li>cream-row</li>
+          <li>cream-card</li>
+        </ul>
+        <p>Include that file if you want to use those.</p>
+        <p>Here is a complete <code>&lt;head&gt;</code>:</p>
+        <pre><code>
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;meta name="description" content="Page description"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="modern-normalize.css"&gt;
+  &lt;link rel="stylesheet" href="cream.css"&gt;
+  &lt;link rel="stylesheet" href="cream-extra.css"&gt;
+&lt;/head&gt;
+        </code></pre>
+      </section>
+    </article>
+    <article>
+      <header>
+        <h2>Colors</h2>
+      </header>
+      <p>All primary, surface and outline color are derived <b>from a single hue value</b>.</p>
+      <ul>
+        <li>The primary colors are with 90% saturation.</li>
+        <li>The surface and outline colors are with 10% saturation.</li>
+      </ul>
+      <cream-row>
+        <cream-card bg-primary><p>Primary</p></cream-card>
+        <cream-card bg-primary-var><p>Primary variant</p></cream-card>
+      </cream-row>
+      <cream-row>
+        <cream-card bg-surface-dim><p>Surface dim</p></cream-card>
+        <cream-card bg-surface><p>Surface</p></cream-card>
+        <cream-card bg-surface-bright><p>Surface bright</p></cream-card>
+      </cream-row>
+      <cream-row>
+        <cream-card bg-surface-container-lowest><p>Surface container lowest</p></cream-card>
+        <cream-card bg-surface-container-low><p>Surface container low</p></cream-card>
+        <cream-card bg-surface-container><p>Surface container</p></cream-card>
+        <cream-card bg-surface-container-high><p>Surface container high</p></cream-card>
+        <cream-card bg-surface-container-highest><p>Surface container highest</p></cream-card>
+      </cream-row>
+      <cream-row>
+        <cream-card bg-on-surface><p>On surface</p></cream-card>
+        <cream-card bg-on-surface-variant><p>On surface variant</p></cream-card>
+        <cream-card bg-outline><p>Outline</p></cream-card>
+        <cream-card bg-outline-variant><p>Outline variant</p></cream-card>
+      </cream-row>
+    </article>
+    <article>
+      <header borderb>
+        <h2>Forms</h2>
+        <h3>this header has a bottom border</h3>
+      </header>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Text input</legend>
+            <div>
+              <label for="input0">Text</label>
+              <input type="text" id="input0" name="input0" value="standard text input">
+            </div>
+            <div>
+              <label for="input1">Password</label>
+              <input type="password" id="input1" name="input1" value="password text input">
+            </div>
+            <div>
+              <label class="required" for="input2">Required</label>
+              <input type="text" id="input2" name="inut2" value="required text input" required>
+            </div>
+            <div>
+              <label for="input3">Read-only</label>
+              <input type="text" id="input3" name="input3" value="read-only text input" readonly="">
+            </div>
+            <div>
+              <label for="input4">Disabled</label>
+              <input type="text" id="input4" name="input4" value="disabled text input" disabled="">
+            </div>
+            <div>
+              <label for="input5">1 < length < 33</label>
+              <input type="text" id="input5" name="input5" minlength="2" maxlength="32" value="" placeholder="abcd">
+              <p>The length of this field must be between 2 and 32 characthers</p>
+            </div>
+            <div>
+              <label for="input6">Multi-line</label>
+              <textarea id="input6" name="input6" placeholder="Lorem, ... you know ..."></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio buttons and checkboxes</legend>
+            <div>
+              <label for="">Choose an option:</label>
+              <input type="radio" id="r0" name="option_set" value="opt0">
+              <label for="r0">First option</label><br>
+              <input type="radio" id="r1" name="option_set" value="opt1">
+              <label for="r1">Second option</label>
+            </div>
+            <div>
+              <input type="checkbox" id="check0" value="c0">
+              <label for="check0">A checkbox</label><br>
+              <input type="checkbox" id="check1" value="c1">
+              <label for="check1">another checkbox</label><br>
+              <label for="input999">Text</label>
+              <input type="text" id="input999" name="input999" value="standard text input">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button>Cancel</button>
+          </fieldset>
+        </form>
+    </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>This is page's footer</p>
+  </footer>
+</body>
