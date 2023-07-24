@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <h1 class="c-primary">Cream CSS framework</h1>
+    <h1 class="c-main">Cream CSS framework</h1>
     <h2>Build instructions</h2>
     <nav>
       <a href="index.html">Home</a>
@@ -23,10 +23,10 @@
   <main>
     <article>
       <header>
-        <h2 class="c-primary">Building with Docker</h2>
+        <h2 class="c-main">Building with Docker</h2>
       </header>
       <section>
-        <h3 class="c-primary">Prepare the container</h3>
+        <h3 class="c-main">Prepare the container</h3>
         <p>Go to your project's directory and run:</p>
         <pre><code>docker pull docker.io/library/node:20-alpine
 docker create -it --name cream_builder -v "${PWD}":/app:Z -w /app node:20-alpine /bin/ash
@@ -42,7 +42,7 @@ npm install --global gulp-cli
         </ul>
       </section>
       <section>
-        <h3 class="c-primary">Using the container</h3>
+        <h3 class="c-main">Using the container</h3>
         <p>If the container is stopped start it with:</p>
         <pre><code>docker start cream_builder</code></pre>
         <p>and execute your commands. Here are some examples based on this project's <code>gulpfile</code>:</p>
@@ -52,7 +52,7 @@ docker exec -it cream_builder gulp build_all
 docker exec -it cream_builder gulp clean</code></pre>
       </section>
       <section>
-        <h3 class="c-primary">Cleanup</h3>
+        <h3 class="c-main">Cleanup</h3>
         <pre><code># stop the container
 docker stop cream_css
 # remove the container

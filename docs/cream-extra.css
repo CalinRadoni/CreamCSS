@@ -1,7 +1,7 @@
 /*! CreamCSS-extra v{{ version }} | MIT License | https://github.com/CalinRadoni/CreamCSS */
 
 .border-b {
-  border-bottom: 1px solid var(--mdc-primary);
+  border-bottom: 1px solid var(--c-main);
 }
 
 cream-row {
@@ -19,61 +19,61 @@ cream-card {
   border-radius: var(--border-radius);
 }
 
-cream-card[bg-primary] {
-  background: var(--mdc-primary);
-  color: var(--mdc-on-primary);
+cream-card[bg-main] {
+  background: var(--c-main);
+  color: var(--c-on-main);
 }
-cream-card[bg-primary-var] {
-  background: var(--mdc-primary-var);
-  color: var(--mdc-on-primary-var);
+cream-card[bg-main-v] {
+  background: var(--c-main-v);
+  color: var(--c-on-main-v);
 }
-cream-card[bg-surface-dim] {
-  background: var(--mdc-surface-dim);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-dim] {
+  background: var(--c-back-dim);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface] {
-  background: var(--mdc-surface);
-  color: var(--mdc-on-surface);
+cream-card[bg-back] {
+  background: var(--c-back);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-bright] {
-  background: var(--mdc-surface-bright);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-bright] {
+  background: var(--c-back-bright);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-container-lowest] {
-  background: var(--mdc-surface-container-lowest);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-c0] {
+  background: var(--c-back-c0);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-container-low] {
-  background: var(--mdc-surface-container-low);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-c1] {
+  background: var(--c-back-c1);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-container] {
-  background: var(--mdc-surface-container);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-c2] {
+  background: var(--c-back-c2);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-container-high] {
-  background: var(--mdc-surface-container-high);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-c3] {
+  background: var(--c-back-c3);
+  color: var(--c-on-back);
 }
-cream-card[bg-surface-container-highest] {
-  background: var(--mdc-surface-container-highest);
-  color: var(--mdc-on-surface);
+cream-card[bg-back-c4] {
+  background: var(--c-back-c4);
+  color: var(--c-on-back);
 }
-cream-card[bg-on-surface] {
-  background: var(--mdc-on-surface);
-  color: var(--mdc-surface);
+cream-card[bg-on-back] {
+  background: var(--c-on-back);
+  color: var(--c-back);
 }
-cream-card[bg-on-surface-variant] {
-  background: var(--mdc-on-surface-variant);
-  color: var(--mdc-surface);
+cream-card[bg-on-back-v] {
+  background: var(--c-on-back-v);
+  color: var(--c-back);
 }
 cream-card[bg-outline] {
-  background: var(--mdc-outline);
-  color: var(--mdc-surface);
+  background: var(--c-outline);
+  color: var(--c-back);
 }
-cream-card[bg-outline-variant] {
-  background: var(--mdc-outline-variant);
-  color: var(--mdc-surface);
+cream-card[bg-outline-v] {
+  background: var(--c-outline-v);
+  color: var(--c-back);
 }
 
 @media screen and (min-width: 34rem) {
