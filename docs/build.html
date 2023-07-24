@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cream CSS Build</title>
+  <meta name="description" content="Cream CSS Build instructions">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modern-normalize.css">
+  <link rel="stylesheet" href="cream.css">
+  <link rel="stylesheet" href="cream-extra.css">
+</head>
+<body>
+  <header>
+    <h1 class="c-primary">Cream CSS framework</h1>
+    <h2>Build instructions</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="build.html">Build</a>
+      <a href="https://github.com/CalinRadoni/CreamCSS">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2 class="c-primary">Building with Docker</h2>
+      </header>
+      <section>
+        <h3 class="c-primary">Prepare the container</h3>
+        <p>Go to your project's directory and run:</p>
+        <pre><code>docker pull docker.io/library/node:20-alpine
+docker create -it --name cream_builder -v "${PWD}":/app:Z -w /app node:20-alpine /bin/ash
+docker start -a -i cream_builder</code></pre>
+        <p>In container execute:</p>
+        <pre><code>npm rm --global gulp
+npm install --global gulp-cli
+./scripts/install_gulps.sh</code></pre>
+        <p>To exit from container use either:</p>
+        <ul>
+          <li><code>exit</code> to stop the container and exit</li>
+          <li><code>Ctrl+P</code> then <code>Ctrl+Q</code> to leave the container running</li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="c-primary">Using the container</h3>
+        <p>If the container is stopped start it with:</p>
+        <pre><code>docker start cream_builder</code></pre>
+        <p>and execute your commands. Here are some examples based on this project's <code>gulpfile</code>:</p>
+        <pre><code>docker exec -it cream_builder gulp
+docker exec -it cream_builder gulp build
+docker exec -it cream_builder gulp build_all
+docker exec -it cream_builder gulp clean</code></pre>
+      </section>
+      <section>
+        <h3 class="c-primary">Cleanup</h3>
+        <pre><code># stop the container
+docker stop cream_css
+# remove the container
+docker rm cream_css</code></pre>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>@ 2023 Calin Radoni</p>
+    <p>Cream CSS is released under the terms of the <a href="https://opensource.org/license/mit/">MIT License</a></p>
+  </footer>
+</body>
