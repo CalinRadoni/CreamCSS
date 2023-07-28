@@ -13,14 +13,10 @@
 
   --c-error: hsl(0 var(--c-sat) 40%);
 
-  --c-back-dim: #dedede; /* hsl(var(0 0 87%) */
-  --c-back: #fafafa; /* hsl(var(0 0 98%) */
-  --c-back-bright: #fafafa; /* hsl(var(0 0 98%) */
-  --c-back-c0: #ffffff; /* hsl(var(0 0 100%) */
-  --c-back-c1: #f5f5f5; /* hsl(var(0 0 96%) */
-  --c-back-c2: #f0f0f0; /* hsl(var(0 0 94%) */
-  --c-back-c3: #ebebeb; /* hsl(var(0 0 92%) */
-  --c-back-c4: #e6e6e6; /* hsl(var(0 0 90%) */
+  --c-back: #f9f9f9; /* hsl(var(0 0 98%) */
+  --c-back-c1: #f2f2f2; /* hsl(var(0 0 95%) */
+  --c-back-c2: #e5e5e5; /* hsl(var(0 0 90%) */
+  --c-back-c3: #d8d8d8; /* hsl(var(0 0 85%) */
 
   --c-on-back: #1a1a1a; /* hsl(var(0 0 10%) */
   --c-on-back-v: #4d4d4d; /* hsl(var(0 0 30%) */
@@ -43,14 +39,10 @@
 
     --c-error: hsl(0 var(--c-sat) 80%);
 
-    --c-back-dim: #0f0f0f; /* hsl(var(0 0 6%) */
-    --c-back: #0f0f0f; /* hsl(var(0 0 6%) */
-    --c-back-bright: #3d3d3d; /* hsl(var(0 0 24%) */
-    --c-back-c0: #0a0a0a; /* hsl(var(0 0 4%) */
-    --c-back-c1: #1a1a1a; /* hsl(var(0 0 10%) */
-    --c-back-c2: #1f1f1f; /* hsl(var(0 0 12%) */
-    --c-back-c3: #2b2b2b; /* hsl(var(0 0 17%) */
-    --c-back-c4: #383838; /* hsl(var(0 0 22%) */
+    --c-back: #0f0f0f;    /* hsl(var(0 0 6%) */
+    --c-back-c1: #191919; /* hsl(var(0 0 10%) */
+    --c-back-c2: #262626; /* hsl(var(0 0 15%) */
+    --c-back-c3: #333333; /* hsl(var(0 0 20%) */
 
     --c-on-back: #e6e6e6; /* hsl(var(0 0 90%) */
     --c-on-back-v: #cccccc; /* hsl(var(0 0 80%) */
@@ -130,16 +122,14 @@ a:hover {
 }
 
 nav a {
-  margin-right: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  background-color: var(--c-back-c1);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--c-main);
+  margin-right: 1rem;
+  color: var(--c-main);
+  font-size: 1.1rem;
+  border-bottom: var(--active-ind-size) solid var(--c-back-c1);
 }
 nav a:hover {
-  color: var(--c-on-main);
-  background-color: var(--c-main);
   text-decoration: none;
+  border-bottom: var(--active-ind-size) solid var(--c-main);
 }
 
 hr {
@@ -249,11 +239,11 @@ input[type=checkbox] { margin-bottom: 1rem; }
 
 button {
   color: var(--c-main);
-  background-color: var(--c-back-c1);
+  background-color: transparent;
   border-radius: var(--border-radius);
-  border: 1px solid var(--c-main);
-  padding: 0.25rem 0.5rem;
-  margin: 0 0.25rem 0 0;
+  border: var(--active-ind-size) solid var(--c-main);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 0 0;
 }
 button:last-of-type {
   margin-right: 0;
@@ -261,6 +251,13 @@ button:last-of-type {
 button:hover {
   color: var(--c-on-main);
   background-color: var(--c-main);
+}
+
+.col-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 34rem) {
@@ -289,6 +286,11 @@ button:hover {
 
   button:first-of-type {
     margin-left: calc(var(--label-width) + 1rem);
+  }
+
+  .col-row {
+    flex-direction: row;
+    align-items: center;
   }
 }
 

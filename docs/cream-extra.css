@@ -27,20 +27,8 @@ cream-card[bg-main-v] {
   background: var(--c-main-v);
   color: var(--c-on-main-v);
 }
-cream-card[bg-back-dim] {
-  background: var(--c-back-dim);
-  color: var(--c-on-back);
-}
 cream-card[bg-back] {
   background: var(--c-back);
-  color: var(--c-on-back);
-}
-cream-card[bg-back-bright] {
-  background: var(--c-back-bright);
-  color: var(--c-on-back);
-}
-cream-card[bg-back-c0] {
-  background: var(--c-back-c0);
   color: var(--c-on-back);
 }
 cream-card[bg-back-c1] {
@@ -53,10 +41,6 @@ cream-card[bg-back-c2] {
 }
 cream-card[bg-back-c3] {
   background: var(--c-back-c3);
-  color: var(--c-on-back);
-}
-cream-card[bg-back-c4] {
-  background: var(--c-back-c4);
   color: var(--c-on-back);
 }
 cream-card[bg-on-back] {
