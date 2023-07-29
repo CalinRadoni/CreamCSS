@@ -19,9 +19,9 @@
   --c-back-c3: #d8d8d8; /* hsl(var(0 0 85%) */
 
   --c-on-back: #1a1a1a; /* hsl(var(0 0 10%) */
-  --c-on-back-v: #4d4d4d; /* hsl(var(0 0 30%) */
+  --c-on-back-dim: #4d4d4d; /* hsl(var(0 0 30%) */
   --c-outline: #808080; /* hsl(var(0 0 50%) */
-  --c-outline-v: #cccccc; /* hsl(var(0 0 80%) */
+  --c-outline-dim: #cccccc; /* hsl(var(0 0 80%) */
 
   font-size: 16px;
 
@@ -45,9 +45,9 @@
     --c-back-c3: #333333; /* hsl(var(0 0 20%) */
 
     --c-on-back: #e6e6e6; /* hsl(var(0 0 90%) */
-    --c-on-back-v: #cccccc; /* hsl(var(0 0 80%) */
+    --c-on-back-dim: #cccccc; /* hsl(var(0 0 80%) */
     --c-outline: #999999; /* hsl(var(0 0 60%) */
-    --c-outline-v: #4d4d4d; /* hsl(var(0 0 30%) */
+    --c-outline-dim: #4d4d4d; /* hsl(var(0 0 30%) */
   }
 }
 
@@ -106,7 +106,7 @@ p, ul, blockquote {
 }
 blockquote {
   padding: 0.5rem;
-  border-left: 0.5rem solid var(--c-outline-v);
+  border-left: 0.5rem solid var(--c-outline-dim);
   background-color: var(--c-back-c2);
   border-radius: var(--border-radius);
 }
@@ -193,7 +193,7 @@ input, textarea {
 
   outline: none !important;
   box-shadow: none;
-  border: var(--active-ind-size) solid var(--c-outline-v);
+  border: var(--active-ind-size) solid var(--c-outline-dim);
   border-radius: var(--border-radius);
 
   padding: 0.5rem;
@@ -222,7 +222,7 @@ input:invalid {
 /* all <p> elements that follow an <input> element, immediately or not, and both share the same parent */
 input ~ p {
   display: block;
-  color: var(--c-on-back-v);
+  color: var(--c-on-back-dim);
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }

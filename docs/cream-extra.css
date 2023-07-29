@@ -47,16 +47,16 @@ cream-card[bg-on-back] {
   background: var(--c-on-back);
   color: var(--c-back);
 }
-cream-card[bg-on-back-v] {
-  background: var(--c-on-back-v);
+cream-card[bg-on-back-dim] {
+  background: var(--c-on-back-dim);
   color: var(--c-back);
 }
 cream-card[bg-outline] {
   background: var(--c-outline);
   color: var(--c-back);
 }
-cream-card[bg-outline-v] {
-  background: var(--c-outline-v);
+cream-card[bg-outline-dim] {
+  background: var(--c-outline-dim);
   color: var(--c-back);
 }
 
