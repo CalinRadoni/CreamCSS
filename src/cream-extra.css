@@ -19,45 +19,47 @@ cream-card {
   border-radius: var(--border-radius);
 }
 
-cream-card[bg-main] {
+.bg-main   {
   background: var(--c-main);
   color: var(--c-on-main);
 }
-cream-card[bg-main-v] {
+.bg-main-v {
   background: var(--c-main-v);
   color: var(--c-on-main-v);
 }
-cream-card[bg-back] {
+
+.bg-back {
   background: var(--c-back);
   color: var(--c-on-back);
 }
-cream-card[bg-back-c1] {
+.bg-back-c1 {
   background: var(--c-back-c1);
   color: var(--c-on-back);
 }
-cream-card[bg-back-c2] {
+.bg-back-c2 {
   background: var(--c-back-c2);
   color: var(--c-on-back);
 }
-cream-card[bg-back-c3] {
+.bg-back-c3 {
   background: var(--c-back-c3);
   color: var(--c-on-back);
 }
-cream-card[bg-on-back] {
+
+.bg-on-back {
   background: var(--c-on-back);
   color: var(--c-back);
 }
-cream-card[bg-on-back-dim] {
+.bg-on-back-dim {
   background: var(--c-on-back-dim);
   color: var(--c-back);
 }
-cream-card[bg-outline] {
+.bg-outline {
   background: var(--c-outline);
   color: var(--c-back);
 }
-cream-card[bg-outline-dim] {
+.bg-outline-dim {
   background: var(--c-outline-dim);
-  color: var(--c-back);
+  color: var(--c-on-back);
 }
 
 @media screen and (min-width: 34rem) {
