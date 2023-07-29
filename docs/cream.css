@@ -181,11 +181,6 @@ input + label {
   text-align: left;
 }
 
-.required::after {
-  content: " *";
-  color: var(--c-main)
-}
-
 input, textarea {
   display: block;
   color: var(--c-on-back);
