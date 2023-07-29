@@ -37,7 +37,7 @@
           The purpose of this framework is to be used as a starting point for web pages. It is <b>Lightweight</b> and <b>Classless</b>
           so it can be used by adding to a page's header:
         </p>
-        <pre><code>&lt;link rel="stylesheet" href="cream.css"&gt;</code></pre>
+        <pre><code>&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
         <p>to turn the default ugly formatting into a beautiful page.</p>
         <p>The framework was designed by following <b>some</b> design patterns from:</p>
         <ul>
@@ -45,13 +45,17 @@
           <li>GitHub's <a href="https://primer.style/design">Primer Design System</a></li>
           <li>Apple's <a href="https://developer.apple.com/design/human-interface-guidelines">Human Interface Guidelines</a></li>
         </ul>
-        <p>To be sure that the look is the same in different browsers <a href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> should be included before <a href="">CreamCSS</a>. <code>modern-normalize</code> can be
-        downloaded from GitHub, use the minified version for production.</p>
-        <p class="border-b">To continue with typography, this paragraph have a bottom border then follows a horizontal line and a blockquote.</p>
-        <hr/>
-        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas doloribus esse, enim, consequatur aliquam, saepe porro mollitia molestias recusandae itaque quibusdam? Nihil tempore provident deserunt nemo ea odit voluptates.</blockquote>
+        <p>To be sure that the look is the same in different browsers, I use <a href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> to set a default starting style.<br>
+        The <code>dist</code> directory contains minified versions for:</p>
+        <ul>
+          <li>CreamCSS</li>
+          <li>CreamCSS + modern-normalize</li>
+          <li>CreamCSS + cream-extra</li>
+          <li>CreamCSS + cream-extra + modern-normalize</li>
+        </ul>
+        <blockquote>This is a <code>blockquote</code> included here for demo purposes.</blockquote>
         <p>Custom elements may complicate the usage and increase the framework's size, custom attributes
-          should start with <code>data-</code> and increase the framework's size in the long term so,
+          should start with <code>data-</code> and increase the code size in the long term so,
           for added flexibility, I have decided to add some classes:</p>
         <ul>
           <li><code>c-req</code> to style the labels of required inputs</li>
@@ -64,7 +68,7 @@
           <li>cream-card</li>
         </ul>
         <p>Include that file if you want to use those.</p>
-        <p>Here is a complete <code>&lt;head&gt;</code>:</p>
+        <p>Here is a complete <code>&lt;head&gt;</code> with non-minimized versions:</p>
         <pre><code>&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;Page Title&lt;/title&gt;
@@ -73,6 +77,14 @@
   &lt;link rel="stylesheet" href="modern-normalize.css"&gt;
   &lt;link rel="stylesheet" href="cream.css"&gt;
   &lt;link rel="stylesheet" href="cream-extra.css"&gt;
+&lt;/head&gt;</code></pre>
+        <p>and one with thecombined and minimized version:</p>
+        <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;meta name="description" content="Page description"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="cream-all-mn.css"&gt;
 &lt;/head&gt;</code></pre>
       </section>
     </article>
@@ -86,20 +98,20 @@
         <li>The surface and outline colors are with 10% saturation.</li>
       </ul>
       <cream-row>
-        <cream-card bg-main><p>Main</p></cream-card>
-        <cream-card bg-main-v><p>Main variant</p></cream-card>
+        <cream-card class="bg-main"><p>Main</p></cream-card>
+        <cream-card class="bg-main-v"><p>Main variant</p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card bg-back><p>Background</p></cream-card>
-        <cream-card bg-back-c1><p>Surface 1</p></cream-card>
-        <cream-card bg-back-c2><p>Surface 2</p></cream-card>
-        <cream-card bg-back-c3><p>Surface 3</p></cream-card>
+        <cream-card class="bg-back"><p>Background</p></cream-card>
+        <cream-card class="bg-back-c1"><p>Surface 1</p></cream-card>
+        <cream-card class="bg-back-c2"><p>Surface 2</p></cream-card>
+        <cream-card class="bg-back-c3"><p>Surface 3</p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card bg-on-back><p>On surface</p></cream-card>
-        <cream-card bg-on-back-dim><p>On surface variant</p></cream-card>
-        <cream-card bg-outline><p>Outline</p></cream-card>
-        <cream-card bg-outline-dim><p>Outline variant</p></cream-card>
+        <cream-card class="bg-on-back"><p>On surface</p></cream-card>
+        <cream-card class="bg-on-back-dim"><p>On surface variant</p></cream-card>
+        <cream-card class="bg-outline"><p>Outline</p></cream-card>
+        <cream-card class="bg-outline-dim"><p>Outline variant</p></cream-card>
       </cream-row>
     </article>
     <article>
@@ -120,7 +132,7 @@
             </div>
             <div>
               <label class="c-req" for="input2">Required</label>
-              <input type="text" id="input2" name="inut2" value="required text input" required>
+              <input type="text" id="input2" name="input2" value="required text input" required>
             </div>
             <div>
               <label for="input3">Read-only</label>
