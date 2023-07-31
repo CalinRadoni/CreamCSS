@@ -5,5 +5,9 @@
 
 # add dependencies
 npm install --save-dev gulp \
-    gulp-less gulp-clean-css gulp-concat \
-    gulp-rename gulp-replace del
+    gulp-less \
+    gulp-clean-css \
+    gulp-concat \
+    gulp-rename \
+    gulp-replace \
+    del

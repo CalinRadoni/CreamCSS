@@ -5,9 +5,7 @@
   <title>Cream CSS Build</title>
   <meta name="description" content="Cream CSS Build instructions">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="modern-normalize.css">
-  <link rel="stylesheet" href="cream.css">
-  <link rel="stylesheet" href="cream-extra.css">
+  <link rel="stylesheet" href="cream_all_mn.css">
 </head>
 <body>
   <header class="col-row">
@@ -29,7 +27,7 @@
       </header>
       <section>
         <h3 class="c-main">Prepare the container</h3>
-        <p>Go to your project's directory and run:</p>
+        <p>Go to CreamCSS project's root directory and run:</p>
         <pre><code>docker pull docker.io/library/node:20-alpine
 docker create -it --name cream_builder -v "${PWD}":/app:Z -w /app node:20-alpine /bin/ash
 docker start -a -i cream_builder</code></pre>
@@ -50,7 +48,6 @@ npm install --global gulp-cli
         <p>and execute your commands. Here are some examples based on this project's <code>gulpfile</code>:</p>
         <pre><code>docker exec -it cream_builder gulp
 docker exec -it cream_builder gulp build
-docker exec -it cream_builder gulp build_all
 docker exec -it cream_builder gulp clean</code></pre>
       </section>
       <section>
