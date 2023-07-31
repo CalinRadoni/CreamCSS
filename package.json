@@ -1,24 +1,23 @@
 {
-  "name": "CreamCSS",
+  "name": "CreamCSS-builder",
   "version": "0.8.0",
-  "description": "Lightweight, Classless, Responsive, Mobile First CSS framework using HTML Semantic Elements",
+  "description": "Gulp builder for CreamCSS framework",
+  "keywords": [],
+  "homepage": "https://calinradoni.github.io/CreamCSS/",
+  "license": "MIT",
+  "author": "Calin Radoni (https://github.com/CalinRadoni)",
   "main": "gulpfile.mjs",
+  "repository": "https://github.com/CalinRadoni/CreamCSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Calin Radoni",
-  "license": "MIT",
   "devDependencies": {
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-insert": "^0.5.0",
     "gulp-less": "^5.0.0",
-    "gulp-merge": "^0.1.1",
     "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.1.4",
-    "vinyl": "^3.0.0"
+    "gulp-replace": "^1.1.4"
   }
 }
