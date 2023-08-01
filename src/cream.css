@@ -13,15 +13,15 @@
 
   --c-error: hsl(0 var(--c-sat) 40%);
 
-  --c-back: #f9f9f9; /* hsl(var(0 0 98%) */
-  --c-back-c1: #f2f2f2; /* hsl(var(0 0 95%) */
-  --c-back-c2: #e5e5e5; /* hsl(var(0 0 90%) */
-  --c-back-c3: #d8d8d8; /* hsl(var(0 0 85%) */
+  --c-back: #f9f9f9; /* hsl(0 0 98%) */
+  --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
+  --c-back-c2: #e5e5e5; /* hsl(0 0 90%) */
+  --c-back-c3: #d8d8d8; /* hsl(0 0 85%) */
 
-  --c-on-back: #1a1a1a; /* hsl(var(0 0 10%) */
-  --c-on-back-dim: #4d4d4d; /* hsl(var(0 0 30%) */
-  --c-outline: #808080; /* hsl(var(0 0 50%) */
-  --c-outline-dim: #cccccc; /* hsl(var(0 0 80%) */
+  --c-on-back: #1a1a1a; /* hsl(0 0 10%) */
+  --c-on-back-dim: #595959; /* hsl(0 0 35%) */
+  --c-outline: #808080; /* hsl(0 0 50%) */
+  --c-outline-dim: #cccccc; /* hsl(0 0 80%) */
 
   font-size: 16px;
 
@@ -39,15 +39,15 @@
 
     --c-error: hsl(0 var(--c-sat) 80%);
 
-    --c-back: #0f0f0f;    /* hsl(var(0 0 6%) */
-    --c-back-c1: #191919; /* hsl(var(0 0 10%) */
-    --c-back-c2: #262626; /* hsl(var(0 0 15%) */
-    --c-back-c3: #333333; /* hsl(var(0 0 20%) */
+    --c-back: #0f0f0f;    /* hsl(0 0 6%) */
+    --c-back-c1: #191919; /* hsl(0 0 10%) */
+    --c-back-c2: #262626; /* hsl(0 0 15%) */
+    --c-back-c3: #333333; /* hsl(0 0 20%) */
 
-    --c-on-back: #e6e6e6; /* hsl(var(0 0 90%) */
-    --c-on-back-dim: #cccccc; /* hsl(var(0 0 80%) */
-    --c-outline: #999999; /* hsl(var(0 0 60%) */
-    --c-outline-dim: #4d4d4d; /* hsl(var(0 0 30%) */
+    --c-on-back: #e6e6e6; /* hsl(0 0 90%) */
+    --c-on-back-dim: #a6a6a6; /* hsl(0 0 65%) */
+    --c-outline: #999999; /* hsl(0 0 60%) */
+    --c-outline-dim: #4d4d4d; /* hsl(0 0 30%) */
   }
 }
 
@@ -99,6 +99,9 @@ article {
 article header {
   background: transparent;
   padding: 0;
+}
+section {
+  margin-bottom: 1rem;
 }
 
 p, ul, blockquote {
@@ -206,7 +209,7 @@ input:read-only, textarea:read-only {
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
 input:disabled, textarea:disabled {
-  color: var(--c-outline);
+  color: var(--c-on-back-dim);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
@@ -222,10 +225,15 @@ input ~ p {
   margin-top: 0.5rem;
 }
 
+::placeholder {
+  color: var(--c-on-back-dim);
+  opacity: 0.9;
+}
+
 input[type=radio], input[type=checkbox] {
   margin: 0 0 0.5rem 1rem;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   display: inline;
   accent-color: var(--c-main);
 
@@ -276,11 +284,11 @@ button:hover {
     margin: 0.2rem 0 0 1rem;
   }
   input[type=radio], input[type=checkbox] {
-    margin-left: calc(var(--label-width) + 1.5rem);
+    margin-left: calc(var(--label-width) + 1.25rem + 2px);
   }
 
   button:first-of-type {
-    margin-left: calc(var(--label-width) + 1rem);
+    margin-left: calc(var(--label-width) + 1.25rem);
   }
 
   .col-row {

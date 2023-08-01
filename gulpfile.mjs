@@ -51,7 +51,7 @@ function process_cream_all() {
 
 function process_cream_all_mn() {
   return src([srcDir + 'modern-normalize.css', srcDir + 'cream.css', srcDir + 'cream-extra.css'])
-    .pipe(concat('cream_all_mn.css'))
+    .pipe(concat('cream-all-mn.css'))
     .pipe(replace("{{ version }}", app_version))
     .pipe(less())
     .pipe(cleanCSS())
