@@ -1,9 +1,5 @@
 /*! CreamCSS-extra v{{ version }} | MIT License | https://github.com/CalinRadoni/CreamCSS */
 
-.border-b {
-  border-bottom: 1px solid var(--c-main);
-}
-
 cream-row {
   display: flex;
   width: 100%;
