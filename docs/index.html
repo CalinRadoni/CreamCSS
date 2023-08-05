@@ -24,8 +24,7 @@
       <section>
         <p>
           The purpose of this framework is to be used as a starting point for web pages.<br>
-          It is <b>Lightweight</b> and <b>Classless</b>
-          so it can be used by adding to a page's header:
+          It is mostly <b>Classless</b> so it can be used just by adding to a page's header:
         </p>
         <pre><code>&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
         <p>to turn the default ugly formatting into a beautiful page.</p>
@@ -40,12 +39,6 @@
         <h4>Header level 4</h4>
         <h5>Header level 5</h5>
         <h6>Header level 6</h6>
-        <p>
-          The purpose of this framework is to be used as a starting point for web pages. It is <b>Lightweight</b> and <b>Classless</b>
-          so it can be used by adding to a page's header:
-        </p>
-        <pre><code>&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
-        <p>to turn the default ugly formatting into a beautiful page.</p>
         <p>The framework was designed by following <b>some</b> design patterns from:</p>
         <ul>
           <li>Google's <a href="https://m3.material.io/">Material Design 3</a></li>
@@ -67,14 +60,15 @@
         <ul>
           <li><code>c-req</code> to style the labels of required inputs</li>
           <li><code>c-main</code> to apply the primary color to an element</li>
-          <li><code>border-b</code>, defined in <code>cream-extra.css</code> file, to set the bottom border of an element</li>
+          <li><code>c-error</code> to apply the error color to an element</li>
+          <li>In the <code>cream-extra.css</code> file, <code>bg-</code> classes to set foreground and background colors</li>
         </ul>
         <p>There are some custom HTML semantic elements in the <code>cream-extra.css</code> file:</p>
         <ul>
-          <li>cream-row</li>
-          <li>cream-card</li>
+          <li><code>cream-row</code> is a column / row responsive flex container</li>
+          <li><code>cream-card</code> is a flex container with rounded corners</li>
         </ul>
-        <p>Include that file if you want to use those.</p>
+        <p><code>cream-row</code> and <code>cream-card</code> are used in the Colors section of this page.</p>
         <p>Here is a complete <code>&lt;head&gt;</code> with the combined and minimized version:</p>
         <pre><code>&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -93,7 +87,7 @@
       <p>The background, surface and standard text are shades of gray.</p>
       <cream-row>
         <cream-card class="bg-main"><p>Main</p></cream-card>
-        <cream-card class="bg-main-v"><p>Main dark - this will be changed</p></cream-card>
+        <cream-card class="bg-main-v"><p>Main dim, unused, this will be changed</p></cream-card>
       </cream-row>
       <cream-row>
         <cream-card class="bg-back"><p>Background</p></cream-card>
