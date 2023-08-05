@@ -151,7 +151,8 @@ pre code {
   margin: 0.5rem;
 }
 code {
-  font-size: 0.9rem;
+  font-size: 0.9em;
+  padding: 0 0.5em;
 }
 
 form { margin: 0 1rem; }
@@ -313,6 +314,5 @@ button:hover {
   color: var(--c-main)
 }
 
-.c-main {
-  color: var(--c-main);
-}
+.c-main { color: var(--c-main); }
+.c-error { color: var(--c-error); }
