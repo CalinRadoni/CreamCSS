@@ -3,15 +3,17 @@
 :root {
   color-scheme: light dark;
 
-  --c-hue: 210;
-  --c-sat: 90%;
+  --c-hL: var(--c-hue-light, 210);
+  --c-hD: var(--c-hue-dark, var(--c-hue-light, 210));
 
-  --c-main: hsl(var(--c-hue) var(--c-sat) 50%);
-  --c-on-main: hsl(var(--c-hue) var(--c-sat) 97%);
-  --c-main-v: hsl(var(--c-hue) var(--c-sat) 85%);
-  --c-on-main-v: hsl(var(--c-hue) var(--c-sat) 10%);
+  --sat: var(--c-sat, 90%);
 
-  --c-error: hsl(0 var(--c-sat) 40%);
+  --c-main: hsl(var(--c-hL) var(--sat) 50%);
+  --c-on-main: hsl(var(--c-hL) var(--sat) 97%);
+  --c-main-v: hsl(var(--c-hL) var(--sat) 85%);
+  --c-on-main-v: hsl(var(--c-hL) var(--sat) 10%);
+
+  --c-error: hsl(0 var(--sat) 40%);
 
   --c-back: #f9f9f9; /* hsl(0 0 98%) */
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
@@ -32,12 +34,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-main: hsl(var(--c-hue) var(--c-sat) 50%);
-    --c-on-main: hsl(var(--c-hue) var(--c-sat) 97%);
-    --c-main-v: hsl(var(--c-hue) var(--c-sat) 15%);
-    --c-on-main-v: hsl(var(--c-hue) var(--c-sat) 90%);
+    --c-main: hsl(var(--c-hD) var(--sat) 50%);
+    --c-on-main: hsl(var(--c-hD) var(--sat) 97%);
+    --c-main-v: hsl(var(--c-hD) var(--sat) 15%);
+    --c-on-main-v: hsl(var(--c-hD) var(--sat) 90%);
 
-    --c-error: hsl(0 var(--c-sat) 80%);
+    --c-error: hsl(0 var(--sat) 80%);
 
     --c-back: #0f0f0f;    /* hsl(0 0 6%) */
     --c-back-c1: #191919; /* hsl(0 0 10%) */

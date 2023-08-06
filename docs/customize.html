@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cream CSS Customization</title>
+  <meta name="description" content="Cream CSS Customization instructions">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cream-all-mn.css">
+</head>
+<body>
+  <header class="col-row">
+    <div>
+      <h1 class="c-main">Cream CSS framework</h1>
+      <h2>Customization instructions</h2>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="customize.html">Customization</a>
+      <a href="build.html">Build</a>
+      <a href="https://github.com/CalinRadoni/CreamCSS">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2 class="c-main">Change the main color</h2>
+      </header>
+      <section>
+        <p>Include a <code>css</code> file with your definitions before Cream CSS, example:</p>
+        <pre><code>&lt;link rel="stylesheet" href="my-color-customization.css"&gt;
+&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
+        <p>The hue of the main color can be set by defining the <code>--c-hue-light</code> variable.</p>
+        <p>For dark mode a different hue can be set by defining the <code>--c-hue-dark</code> variable.</p>
+        <p>A custom saturation can be set by defining the <code>--c-sat</code> variable.</p>
+        <p>Here is an example file:</p>
+        <pre><code>:root {
+  --c-hL: 210;
+  --c-hD: 210;
+
+  --sat: 90%;
+}</code></pre>
+      <p>Note that the same saturation will also be used for <code>error</code> color.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>@ 2023 Calin Radoni</p>
+    <p>Cream CSS is released under the terms of the <a href="https://opensource.org/license/mit/">MIT License</a></p>
+  </footer>
+</body>
