@@ -13,7 +13,7 @@
   --c-main-v: hsl(var(--c-hL) var(--sat) 85%);
   --c-on-main-v: hsl(var(--c-hL) var(--sat) 10%);
 
-  --c-error: hsl(0 var(--sat) 40%);
+  --c-error: hsl(0 var(--sat) 50%);
 
   --c-back: #f9f9f9; /* hsl(0 0 98%) */
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
@@ -39,7 +39,7 @@
     --c-main-v: hsl(var(--c-hD) var(--sat) 15%);
     --c-on-main-v: hsl(var(--c-hD) var(--sat) 90%);
 
-    --c-error: hsl(0 var(--sat) 80%);
+    --c-error: hsl(0 var(--sat) 70%);
 
     --c-back: #0f0f0f;    /* hsl(0 0 6%) */
     --c-back-c1: #191919; /* hsl(0 0 10%) */
