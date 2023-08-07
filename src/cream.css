@@ -8,17 +8,13 @@
 
   --sat: var(--c-sat, 90%);
 
-  --c-main: hsl(var(--c-hL) var(--sat) 50%);
-  --c-on-main: hsl(var(--c-hL) var(--sat) 97%);
-  --c-main-v: hsl(var(--c-hL) var(--sat) 85%);
-  --c-on-main-v: hsl(var(--c-hL) var(--sat) 10%);
+  --c-main: #007AFF;
+  --c-error: #FF3B30;
+  --c-code: #072;
 
-  --c-error: hsl(0 var(--sat) 50%);
-
-  --c-back: #f9f9f9; /* hsl(0 0 98%) */
+  --c-back: #fff; /* hsl(0 0 100%) */
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
   --c-back-c2: #e5e5e5; /* hsl(0 0 90%) */
-  --c-back-c3: #d8d8d8; /* hsl(0 0 85%) */
 
   --c-on-back: #1a1a1a; /* hsl(0 0 10%) */
   --c-on-back-dim: #595959; /* hsl(0 0 35%) */
@@ -34,17 +30,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-main: hsl(var(--c-hD) var(--sat) 50%);
-    --c-on-main: hsl(var(--c-hD) var(--sat) 97%);
-    --c-main-v: hsl(var(--c-hD) var(--sat) 15%);
-    --c-on-main-v: hsl(var(--c-hD) var(--sat) 90%);
+    --c-main: #0A84FF;
+    --c-error: #FF453A;
+    --c-code: #32D74B;
 
-    --c-error: hsl(0 var(--sat) 70%);
-
-    --c-back: #0f0f0f;    /* hsl(0 0 6%) */
+    --c-back: #000;    /* hsl(0 0 0%) */
     --c-back-c1: #191919; /* hsl(0 0 10%) */
     --c-back-c2: #262626; /* hsl(0 0 15%) */
-    --c-back-c3: #333333; /* hsl(0 0 20%) */
 
     --c-on-back: #e6e6e6; /* hsl(0 0 90%) */
     --c-on-back-dim: #a6a6a6; /* hsl(0 0 65%) */
@@ -68,7 +60,7 @@ body {
 header {
   margin: 0 0 1rem;
   padding: 1rem;
-  background: var(--c-back-c3);
+  background: var(--c-back-c2);
   color: var(--c-on-back);
 }
 footer {
@@ -112,7 +104,7 @@ p, ul, blockquote {
 blockquote {
   padding: 0.5rem;
   border-left: 0.5rem solid var(--c-outline-dim);
-  background-color: var(--c-back-c2);
+  background-color: var(--c-back-c1);
   border-radius: var(--border-radius);
 }
 
@@ -145,7 +137,7 @@ hr {
 }
 
 pre code {
-  background-color: var(--c-back-c2);
+  background-color: var(--c-back-c1);
   border-radius: var(--border-radius);
   display: block;
   overflow: auto;
@@ -154,7 +146,8 @@ pre code {
 }
 code {
   font-size: 0.9em;
-  padding: 0 0.5em;
+  padding: 0 2px;
+  color: var(--c-code);
 }
 
 form { margin: 0 1rem; }
@@ -255,7 +248,7 @@ button:last-of-type {
   margin-right: 0;
 }
 button:hover {
-  color: var(--c-on-main);
+  color: var(--c-back);
   background-color: var(--c-main);
 }
 

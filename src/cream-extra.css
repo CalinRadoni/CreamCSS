@@ -17,11 +17,15 @@ cream-card {
 
 .bg-main   {
   background: var(--c-main);
-  color: var(--c-on-main);
+  color: var(--c-back);
 }
-.bg-main-v {
-  background: var(--c-main-v);
-  color: var(--c-on-main-v);
+.bg-error {
+  background: var(--c-back);
+  color: var(--c-error);
+}
+.bg-code {
+  background: var(--c-back-c1);
+  color: var(--c-code);
 }
 
 .bg-back {
@@ -34,10 +38,6 @@ cream-card {
 }
 .bg-back-c2 {
   background: var(--c-back-c2);
-  color: var(--c-on-back);
-}
-.bg-back-c3 {
-  background: var(--c-back-c3);
   color: var(--c-on-back);
 }
 
