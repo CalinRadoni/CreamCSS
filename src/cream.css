@@ -310,10 +310,7 @@ button:hover {
 .c-txt   { color: var(--c-txt); }
 .c-txtd  { color: var(--c-txt-dim); }
 
-.bg-m {
-  background: var(--c-main);
-  color: var(--c-back);
-}
+.bg-m { background: var(--c-main); }
 .bg-0 { background: var(--c-back); }
 .bg-1 { background: var(--c-back-c1); }
 .bg-2 { background: var(--c-back-c2); }

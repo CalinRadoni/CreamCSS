@@ -15,14 +15,10 @@ cream-card {
   border-radius: var(--border-radius);
 }
 
-.bg-outline {
-  background: var(--c-outline);
-  color: var(--c-back);
-}
-.bg-outline-dim {
-  background: var(--c-outline-dim);
-  color: var(--c-txt);
-}
+.br-1  { border: 1px solid var(--c-outline); }
+.br-1d { border: 1px solid var(--c-outline-dim); }
+.br-a  { border: var(--active-ind-size) solid var(--c-outline); }
+.br-ad { border: var(--active-ind-size) solid var(--c-outline-dim); }
 
 @media screen and (min-width: 34rem) {
   cream-row {

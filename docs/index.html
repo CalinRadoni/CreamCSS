@@ -28,7 +28,6 @@
           It is mostly <b>Classless</b> so it can be used just by adding to a page's header:
         </p>
         <pre><code>&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
-        <p>to turn the default ugly formatting into a beautiful page.</p>
       </section>
       <header>
         <h2 class="c-main">Typography</h2>
@@ -40,18 +39,17 @@
         <h4>Header level 4</h4>
         <h5>Header level 5</h5>
         <h6>Header level 6</h6>
-        <p>The framework was designed by following <b>some</b> design patterns from:</p>
-        <ul>
-          <li>Google's <a href="https://m3.material.io/">Material Design 3</a></li>
-          <li>GitHub's <a href="https://primer.style/design">Primer Design System</a></li>
-          <li>Apple's <a href="https://developer.apple.com/design/human-interface-guidelines">Human Interface Guidelines</a></li>
+        <p>The framework was designed by following <b>some</b> design patterns
+          from Google's <a href="https://m3.material.io/">Material Design 3</a>,
+          GitHub's <a href="https://primer.style/design">Primer Design System</a> and
+          Apple's <a href="https://developer.apple.com/design/human-interface-guidelines">Human Interface Guidelines</a>.</li>
         </ul>
         <p>To be sure that the look is the same in different browsers, I selected <a href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> to set a default starting style.<br>
         The <code>dist</code> directory contains minified versions for:</p>
         <ul>
           <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream.min.css">CreamCSS</a> - 4.7k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-mn.css">CreamCSS + modern-normalize</a> - 6.1k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all.min.css">CreamCSS + cream-extra</a> - 5.3k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-mn.css">CreamCSS + modern-normalize</a> - 6.0k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all.min.css">CreamCSS + cream-extra</a> - 5.2k</li>
           <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all-mn.css">CreamCSS + cream-extra + modern-normalize</a> - 6.6k</li>
         </ul>
         <blockquote>This is a <code>blockquote</code> included here for demo purposes.</blockquote>
@@ -60,10 +58,10 @@
           for added flexibility, I have decided to add some classes:</p>
         <ul>
           <li><code>c-req</code> to style the labels of required inputs</li>
+          <li><code>c-txt</code> and <code>c-txtd</code> for standard and dim text color</li>
           <li><code>c-main</code>, <code>c-error</code> and <code>c-code</code> to apply colors</li>
-          <li><code>bg-m</code>, to set main color as background and background color as text color</li>
-          <li><code>bg-0</code>, <code>bg-1</code>, <code>bg-2</code> to set background colors</li>
-          <li>In the <code>cream-extra.css</code> file, <code>bg-</code> classes to set other foreground and background colors</li>
+          <li><code>bg-m</code>, <code>bg-0</code>, <code>bg-1</code>, <code>bg-2</code> to set background colors</li>
+          <li>In the <code>cream-extra.css</code> file, <code>br-</code> classes for borders</li>
         </ul>
         <p>There are some custom HTML semantic elements in the <code>cream-extra.css</code> file:</p>
         <ul>
@@ -89,22 +87,24 @@
       <cream-row>
         <cream-card class="bg-m"><p>Main color as background <b>bg-m</b></p></cream-card>
         <cream-card class="c-main"><p>Main color <b>c-main</b></p></cream-card>
-        <cream-card class="c-code"><p>Code block <b>c-code</b></p></cream-card>
-        <cream-card class="c-error"><p>Error text <b>c-error</b></p></cream-card>
+        <cream-card class="c-code"><p>Code color <b>c-code</b></p></cream-card>
+        <cream-card class="c-error"><p>Error color <b>c-error</b></p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card class="bg-0 c-txt"><p>Text on Background <b>bg-0 c-txt</b></p></cream-card>
-        <cream-card class="bg-1 c-txt"><p>Text on Surface 1 <b>bg-1 c-txt</b></p></cream-card>
-        <cream-card class="bg-2 c-txt"><p>Surface 2 <b>bg-2 c-txt</b></p></cream-card>
+        <cream-card><p>Default style</p></cream-card>
+        <cream-card class="bg-1"><p>Background 1 <b>bg-1</b></p></cream-card>
+        <cream-card class="bg-2"><p>Background 2 <b>bg-2</b></p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card class="bg-0 c-txtd"><p>Dim text on Background <b>bg-0 c-txtd</b></p></cream-card>
-        <cream-card class="bg-1 c-txtd"><p>Dim text on Surface 1 <b>bg-1 c-txtd</b></p></cream-card>
-        <cream-card class="bg-2 c-txtd"><p>Dim text on Surface 2 <b>bg-2 c-txtd</b></p></cream-card>
+        <cream-card class="c-txtd"><p>Dim text <b> c-txtd</b></p></cream-card>
+        <cream-card class="bg-1 c-txtd"><p>Dim text on background 1 <b>bg-1 c-txtd</b></p></cream-card>
+        <cream-card class="bg-2 c-txtd"><p>Dim text on background 2 <b>bg-2 c-txtd</b></p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card class="bg-outline"><p>Outline <b>bg-outline</b></p></cream-card>
-        <cream-card class="bg-outline-dim"><p>Outline dim <b>bg-outline-dim</b></p></cream-card>
+        <cream-card class="br-1"><p>1 pixel border <b>br-1</b></p></cream-card>
+        <cream-card class="br-1d"><p>1 pixel dim border <b>br-1d</b></p></cream-card>
+        <cream-card class="br-a"><p>border <b>br-a</b></p></cream-card>
+        <cream-card class="br-ad"><p>dim border <b>br-ad</b></p></cream-card>
       </cream-row>
     </article>
     <article>
