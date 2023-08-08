@@ -11,8 +11,8 @@
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
   --c-back-c2: #e5e5e5; /* hsl(0 0 90%) */
 
-  --c-on-back: #1a1a1a; /* hsl(0 0 10%) */
-  --c-on-back-dim: #595959; /* hsl(0 0 35%) */
+  --c-txt: #1a1a1a; /* hsl(0 0 10%) */
+  --c-txt-dim: #595959; /* hsl(0 0 35%) */
   --c-outline: #808080; /* hsl(0 0 50%) */
   --c-outline-dim: #cccccc; /* hsl(0 0 80%) */
 
@@ -33,8 +33,8 @@
     --c-back-c1: #191919; /* hsl(0 0 10%) */
     --c-back-c2: #262626; /* hsl(0 0 15%) */
 
-    --c-on-back: #e6e6e6; /* hsl(0 0 90%) */
-    --c-on-back-dim: #a6a6a6; /* hsl(0 0 65%) */
+    --c-txt: #e6e6e6; /* hsl(0 0 90%) */
+    --c-txt-dim: #a6a6a6; /* hsl(0 0 65%) */
     --c-outline: #999999; /* hsl(0 0 60%) */
     --c-outline-dim: #4d4d4d; /* hsl(0 0 30%) */
   }
@@ -49,20 +49,20 @@ html {
 }
 body {
   background: var(--c-back);
-  color: var(--c-on-back);
+  color: var(--c-txt);
 }
 
 header {
   margin: 0 0 1rem;
   padding: 1rem;
   background: var(--c-back-c2);
-  color: var(--c-on-back);
+  color: var(--c-txt);
 }
 footer {
   margin: auto 0 0;
   padding: 1rem;
   background: var(--c-back-c2);
-  color: var(--c-on-back);
+  color: var(--c-txt);
 }
 
 main {
@@ -167,7 +167,7 @@ label {
   text-align: left;
   width: 100%;
   margin: 0 0 0.5rem;
-  color: var(--c-on-back);
+  color: var(--c-txt);
 }
 input + label {
   display: inline;
@@ -177,7 +177,7 @@ input + label {
 
 input, textarea {
   display: block;
-  color: var(--c-on-back);
+  color: var(--c-txt);
   background-color: var(--c-back-c2);
 
   outline: none !important;
@@ -195,12 +195,12 @@ textarea:active, textarea:focus, textarea:focus-visible {
   border: var(--active-ind-size) solid var(--c-main);
 }
 input:read-only, textarea:read-only {
-  color: var(--c-on-back);
+  color: var(--c-txt);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
 input:disabled, textarea:disabled {
-  color: var(--c-on-back-dim);
+  color: var(--c-txt-dim);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
@@ -211,13 +211,13 @@ input:invalid {
 /* all <p> elements that follow an <input> element, immediately or not, and both share the same parent */
 input ~ p {
   display: block;
-  color: var(--c-on-back-dim);
+  color: var(--c-txt-dim);
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
 
 ::placeholder {
-  color: var(--c-on-back-dim);
+  color: var(--c-txt-dim);
   opacity: 0.9;
 }
 
@@ -307,6 +307,8 @@ button:hover {
 .c-main  { color: var(--c-main); }
 .c-error { color: var(--c-err); }
 .c-code  { color: var(--c-code); }
+.c-txt   { color: var(--c-txt); }
+.c-txtd  { color: var(--c-txt-dim); }
 
 .bg-m {
   background: var(--c-main);

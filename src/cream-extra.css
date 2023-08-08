@@ -15,21 +15,13 @@ cream-card {
   border-radius: var(--border-radius);
 }
 
-.bg-on-back {
-  background: var(--c-on-back);
-  color: var(--c-back);
-}
-.bg-on-back-dim {
-  background: var(--c-on-back-dim);
-  color: var(--c-back);
-}
 .bg-outline {
   background: var(--c-outline);
   color: var(--c-back);
 }
 .bg-outline-dim {
   background: var(--c-outline-dim);
-  color: var(--c-on-back);
+  color: var(--c-txt);
 }
 
 @media screen and (min-width: 34rem) {
