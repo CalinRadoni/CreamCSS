@@ -24,31 +24,23 @@
   <main>
     <article>
       <header>
-        <h2 class="c-error">Important notice</h2>
-      </header>
-      <section>
-        <h3 class="c-error">Ignore this file for now !</h3>
-      </section>
-    </article>
-    <article>
-      <header>
-        <h2 class="c-main">Change the main color</h2>
+        <h2 class="c-main">Change the colors</h2>
       </header>
       <section>
         <p>Include a <code>css</code> file with your definitions before Cream CSS, example:</p>
         <pre><code>&lt;link rel="stylesheet" href="my-color-customization.css"&gt;
 &lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
-        <p>The hue of the main color can be set by defining the <code>--c-hue-light</code> variable.</p>
-        <p>For dark mode a different hue can be set by defining the <code>--c-hue-dark</code> variable.</p>
-        <p>A custom saturation can be set by defining the <code>--c-sat</code> variable.</p>
+        <p>These are the <b>optional</b> defines:</p>
+        <ul>
+          <li>for main color define <code>--u-main-light</code> and <code>--u-main-dark</code></li>
+          <li>for error color define <code>--u-err-light</code> and <code>--u-err-dark</code></li>
+          <li>for code color define <code>--u-code-light</code> and <code>--u-code-dark</code></li>
+        </ul>
         <p>Here is an example file:</p>
         <pre><code>:root {
-  --c-hL: 210;
-  --c-hD: 210;
-
-  --sat: 90%;
+  --u-code-light: #400080;
+  --u-code-dark: #ffff60;
 }</code></pre>
-      <p>Note that the same saturation will also be used for <code>error</code> color.</p>
       </section>
     </article>
   </main>

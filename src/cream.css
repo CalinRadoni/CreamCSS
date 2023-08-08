@@ -3,14 +3,9 @@
 :root {
   color-scheme: light dark;
 
-  --c-hL: var(--c-hue-light, 210);
-  --c-hD: var(--c-hue-dark, var(--c-hue-light, 210));
-
-  --sat: var(--c-sat, 90%);
-
-  --c-main: #007AFF;
-  --c-error: #FF3B30;
-  --c-code: #072;
+  --c-main: var(--u-main-light, #007AFF);
+  --c-err:  var(--u-err-light,  #FF3B30);
+  --c-code: var(--u-code-light, #072);
 
   --c-back: #fff; /* hsl(0 0 100%) */
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
@@ -30,9 +25,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-main: #0A84FF;
-    --c-error: #FF453A;
-    --c-code: #32D74B;
+    --c-main: var(--u-main-dark, #0A84FF);
+    --c-err:  var(--u-err-dark,  #FF453A);
+    --c-code: var(--u-code-dark, #32D74B);
 
     --c-back: #000;    /* hsl(0 0 0%) */
     --c-back-c1: #191919; /* hsl(0 0 10%) */
@@ -210,7 +205,7 @@ input:disabled, textarea:disabled {
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
 input:invalid {
-  border: var(--active-ind-size) solid var(--c-error);
+  border: var(--active-ind-size) solid var(--c-err);
 }
 
 /* all <p> elements that follow an <input> element, immediately or not, and both share the same parent */
@@ -310,7 +305,7 @@ button:hover {
 }
 
 .c-main  { color: var(--c-main); }
-.c-error { color: var(--c-error); }
+.c-error { color: var(--c-err); }
 .c-code  { color: var(--c-code); }
 
 .bg-m {
