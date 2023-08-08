@@ -49,10 +49,10 @@
         <p>To be sure that the look is the same in different browsers, I selected <a href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> to set a default starting style.<br>
         The <code>dist</code> directory contains minified versions for:</p>
         <ul>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream.min.css">CreamCSS</a> - 4.8k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream.min.css">CreamCSS</a> - 4.7k</li>
           <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-mn.css">CreamCSS + modern-normalize</a> - 6.1k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all.min.css">CreamCSS + cream-extra</a> - 5.8k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all-mn.css">CreamCSS + cream-extra + modern-normalize</a> - 7.1k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all.min.css">CreamCSS + cream-extra</a> - 5.3k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all-mn.css">CreamCSS + cream-extra + modern-normalize</a> - 6.6k</li>
         </ul>
         <blockquote>This is a <code>blockquote</code> included here for demo purposes.</blockquote>
         <p>Custom elements may complicate the usage and increase the framework's size, custom attributes
@@ -60,9 +60,10 @@
           for added flexibility, I have decided to add some classes:</p>
         <ul>
           <li><code>c-req</code> to style the labels of required inputs</li>
-          <li><code>c-main</code> to apply the primary color to an element</li>
-          <li><code>c-error</code> to apply the error color to an element</li>
-          <li>In the <code>cream-extra.css</code> file, <code>bg-</code> classes to set foreground and background colors</li>
+          <li><code>c-main</code>, <code>c-error</code> and <code>c-code</code> to apply colors</li>
+          <li><code>bg-m</code>, to set main color as background and background color as text color</li>
+          <li><code>bg-0</code>, <code>bg-1</code>, <code>bg-2</code> to set background colors</li>
+          <li>In the <code>cream-extra.css</code> file, <code>bg-</code> classes to set other foreground and background colors</li>
         </ul>
         <p>There are some custom HTML semantic elements in the <code>cream-extra.css</code> file:</p>
         <ul>
@@ -84,24 +85,23 @@
       <header>
         <h2 class="c-main">Colors</h2>
       </header>
-      <p>The primary color is derived <b>from a single hue value</b>.</p>
       <p>The background, surface and standard text are shades of gray.</p>
       <cream-row>
-        <cream-card class="bg-main"><p>Main color bakground<br>bg-main</p></cream-card>
-        <cream-card class="c-main"><p>Main color text<br>c-main</p></cream-card>
-        <cream-card class="bg-code"><p>Code block<br>bg-code</p></cream-card>
-        <cream-card class="c-error"><p>Error text<br>c-error</p></cream-card>
+        <cream-card class="bg-m"><p>Main color as background <b>bg-m</b></p></cream-card>
+        <cream-card class="c-main"><p>Main color <b>c-main</b></p></cream-card>
+        <cream-card class="c-code"><p>Code block <b>c-code</b></p></cream-card>
+        <cream-card class="c-error"><p>Error text <b>c-error</b></p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card class="bg-back"><p>Background</p></cream-card>
-        <cream-card class="bg-back-c1"><p>Surface 1</p></cream-card>
-        <cream-card class="bg-back-c2"><p>Surface 2</p></cream-card>
+        <cream-card class="bg-0"><p>Background <b>bg-0</b></p></cream-card>
+        <cream-card class="bg-1"><p>Surface 1 <b>bg-1</b></p></cream-card>
+        <cream-card class="bg-2"><p>Surface 2 <b>bg-2</b></p></cream-card>
       </cream-row>
       <cream-row>
-        <cream-card class="bg-on-back"><p>On surface</p></cream-card>
-        <cream-card class="bg-on-back-dim"><p>On surface dim</p></cream-card>
-        <cream-card class="bg-outline"><p>Outline</p></cream-card>
-        <cream-card class="bg-outline-dim"><p>Outline dim</p></cream-card>
+        <cream-card class="bg-on-back"><p>On surface <b>bg-on-back</b></p></cream-card>
+        <cream-card class="bg-on-back-dim"><p>On surface dim <b>bg-on-back-dim</b></p></cream-card>
+        <cream-card class="bg-outline"><p>Outline <b>bg-outline</b></p></cream-card>
+        <cream-card class="bg-outline-dim"><p>Outline dim <b>bg-outline-dim</b></p></cream-card>
       </cream-row>
     </article>
     <article>

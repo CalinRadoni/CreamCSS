@@ -15,32 +15,6 @@ cream-card {
   border-radius: var(--border-radius);
 }
 
-.bg-main   {
-  background: var(--c-main);
-  color: var(--c-back);
-}
-.bg-error {
-  background: var(--c-back);
-  color: var(--c-error);
-}
-.bg-code {
-  background: var(--c-back-c1);
-  color: var(--c-code);
-}
-
-.bg-back {
-  background: var(--c-back);
-  color: var(--c-on-back);
-}
-.bg-back-c1 {
-  background: var(--c-back-c1);
-  color: var(--c-on-back);
-}
-.bg-back-c2 {
-  background: var(--c-back-c2);
-  color: var(--c-on-back);
-}
-
 .bg-on-back {
   background: var(--c-on-back);
   color: var(--c-back);
