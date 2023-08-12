@@ -3,15 +3,12 @@
 CSS framework uses `HTML Semantic Elements` and is built to be:
 
 - `Lightweight`
-- `Classless` (_almost_)
+- `Classless`[^*]
 - `Responsive` and `Mobile First`
 
 The framework selects the `light` or `dark` mode based on user's operating system settings.
 
-## TODO
-
-- decide if different hues are needed for light and dark modes
-- make a test javascript to change the hue automatically, like a rainbow
+[^*]: For added flexibility and to keep the code small I have added a few classes but their usage is optional.
 
 ## Documentation
 
