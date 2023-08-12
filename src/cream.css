@@ -50,23 +50,24 @@ html {
 body {
   background: var(--c-back);
   color: var(--c-txt);
+
+  /* keep the footer at the bottom of the page */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  margin: 0 0 1rem;
+header, footer {
   padding: 1rem;
   background: var(--c-back-c2);
-  color: var(--c-txt);
 }
 footer {
-  margin: auto 0 0;
-  padding: 1rem;
-  background: var(--c-back-c2);
-  color: var(--c-txt);
+  /* keep the footer at the bottom of the page */
+  margin-top: auto;
 }
 
 main {
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 /* Correct the font size for `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
@@ -77,28 +78,22 @@ h4 { font-size: 1rem; }
 h5 { font-size: 0.875rem; }
 h6 { font-size: 0.75rem; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0.5rem 0;
+h1, h2, h3, h4, h5, h6, article, section {
+  margin-bottom: 0.5rem;
 }
 
-article {
-  background: transparent;
-  margin: 1rem 0;
-}
 article header {
   background: transparent;
   padding: 0;
-}
-section {
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 
 p, ul, blockquote {
-  margin-bottom: 0.5rem;
+  margin: 0.8rem 0;
 }
 blockquote {
-  padding: 0.5rem;
-  border-left: 0.5rem solid var(--c-outline-dim);
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
   background-color: var(--c-back-c1);
   border-radius: var(--border-radius);
 }
@@ -128,7 +123,7 @@ hr {
   height: 0;
   border: 0;
   border-bottom: 1px solid var(--c-outline);
-  margin: 0.5rem 0;
+  margin: 0.5rem 1rem;
 }
 
 pre code {
@@ -137,7 +132,7 @@ pre code {
   display: block;
   overflow: auto;
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 code {
   font-size: 0.9em;
@@ -145,14 +140,20 @@ code {
   color: var(--c-code);
 }
 
-form { margin: 0 1rem; }
-form div { margin-bottom: 1rem; }
-form div:last-of-type { margin-bottom: 0; }
+form {
+  margin: 0 1rem;
+}
+form div {
+  margin-bottom: 1rem;
+}
+form div:last-of-type {
+  margin-bottom: 0;
+}
 
 fieldset {
-  margin: 0;
-  padding: 0.5rem 0;
+  padding: 0;
   border: 0;
+  margin-bottom: 1rem;
 }
 
 legend {
@@ -167,7 +168,6 @@ label {
   text-align: left;
   width: 100%;
   margin: 0 0 0.5rem;
-  color: var(--c-txt);
 }
 input + label {
   display: inline;
@@ -177,7 +177,6 @@ input + label {
 
 input, textarea {
   display: block;
-  color: var(--c-txt);
   background-color: var(--c-back-c2);
 
   outline: none !important;
@@ -195,7 +194,6 @@ textarea:active, textarea:focus, textarea:focus-visible {
   border: var(--active-ind-size) solid var(--c-main);
 }
 input:read-only, textarea:read-only {
-  color: var(--c-txt);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
@@ -263,11 +261,13 @@ button:hover {
   }
   label[for=""] {
     display: block;
+    margin-bottom: 0.5rem;
     width: calc(var(--label-width) + 4rem);
   }
 
   input, textarea {
     display: inline-block;
+    vertical-align: baseline;
     margin: 0;
   }
   input ~ p {
