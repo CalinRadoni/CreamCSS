@@ -24,18 +24,19 @@
   <main>
     <article>
       <header>
-        <h2 class="c-main">Building with Docker</h2>
+        <h2 class="c-main">Build with Docker or Podman</h2>
       </header>
       <section>
+        <p>If you use <code>Podman</code> replace <code>docker</code> with <code>podman</code> in the following commands.</p>
+      </section>
+      <section>
         <h3 class="c-main">Prepare the container</h3>
-        <p>Go to CreamCSS project's root directory and run:</p>
-        <pre><code>docker pull docker.io/library/node:20-alpine
-docker create -it --name cream_builder -v "${PWD}":/app:Z -w /app node:20-alpine /bin/ash
+        <p>Go to <code>CreamCSS</code> project's root directory and run:</p>
+        <pre><code>docker pull docker.io/library/node:lts-alpine
+docker create -it --name cream_builder -v "${PWD}":/app:Z -w /app node:lts-alpine /bin/ash
 docker start -a -i cream_builder</code></pre>
         <p>In container execute:</p>
-        <pre><code>npm rm --global gulp
-npm install --global gulp-cli
-./scripts/install_gulps.sh</code></pre>
+        <pre><code>npm install --save-dev clean-css</code></pre>
         <p>To exit from container use either:</p>
         <ul>
           <li><code>exit</code> to stop the container and exit</li>
@@ -43,20 +44,27 @@ npm install --global gulp-cli
         </ul>
       </section>
       <section>
-        <h3 class="c-main">Using the container</h3>
+        <h3 class="c-main">Use the container</h3>
         <p>If the container is stopped start it with:</p>
         <pre><code>docker start cream_builder</code></pre>
-        <p>and execute your commands. Here are some examples based on this project's <code>gulpfile</code>:</p>
-        <pre><code>docker exec -it cream_builder gulp
-docker exec -it cream_builder gulp build
-docker exec -it cream_builder gulp clean</code></pre>
+        <p>To build the minimized files execute:</p>
+        <pre><code>docker exec -it cream_builder node build_CreamCSS.js</code></pre>
+      </section>
+      <section>
+        <h3 class="c-main">Update</h3>
+        <p>If the container is stopped start it with:</p>
+        <pre><code>docker start cream_builder</code></pre>
+        <p>Get a shell in the container then update <code>npm</code> and the packages:</p>
+        <pre><code>docker exec -it cream_builder /bin/ash
+npm install -g npm@latest
+npm update</code></pre>
       </section>
       <section>
         <h3 class="c-main">Cleanup</h3>
-        <pre><code># stop the container
-docker stop cream_css
-# remove the container
-docker rm cream_css</code></pre>
+        <p>These are the commands to stop and remove the container and the downloaded image:</p>
+        <pre><code>docker stop cream_builder
+docker rm cream_builder
+docker rmi node:lts-alpine</code></pre>
       </section>
     </article>
   </main>

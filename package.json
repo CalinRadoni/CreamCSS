@@ -1,12 +1,12 @@
 {
   "name": "CreamCSS-builder",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "description": "Gulp builder for CreamCSS framework",
   "keywords": [],
   "homepage": "https://calinradoni.github.io/CreamCSS/",
   "license": "MIT",
   "author": "Calin Radoni (https://github.com/CalinRadoni)",
-  "main": "gulpfile.mjs",
+  "main": "build_CreamCSS.js",
   "repository": "https://github.com/CalinRadoni/CreamCSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
