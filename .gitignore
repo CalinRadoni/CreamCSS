@@ -3,8 +3,3 @@
 
 # ignore node modules
 /node_modules
-
-# building the package is really needed only to clean/minimize the css
-# failed builds are not that problematic after all so omit this file
-# because of the plaethora of vulnerabilities in npm packages
-/package-lock.json
