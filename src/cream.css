@@ -201,6 +201,10 @@ input:disabled, textarea:disabled {
   color: var(--c-txt-dim);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
+
+  /* Safari workaround */
+  -webkit-text-fill-color: var(--c-txt-dim);
+  opacity: 1;
 }
 input:invalid {
   border: var(--active-ind-size) solid var(--c-err);
