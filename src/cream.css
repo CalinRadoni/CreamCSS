@@ -5,7 +5,7 @@
 
   --c-main: var(--u-main-light, #007AFF);
   --c-err:  var(--u-err-light,  #FF3B30);
-  --c-code: var(--u-code-light, #072);
+  --c-code: var(--u-code-light, #803c00); /* hsl(28, 100%, 25%)) */
 
   --c-back: #fff; /* hsl(0 0 100%) */
   --c-back-c1: #f2f2f2; /* hsl(0 0 95%) */
@@ -27,7 +27,7 @@
   :root {
     --c-main: var(--u-main-dark, #0A84FF);
     --c-err:  var(--u-err-dark,  #FF453A);
-    --c-code: var(--u-code-dark, #32D74B);
+    --c-code: var(--u-code-dark, #ffd6b3); /* hsl(28 100% 85%)) */
 
     --c-back: #000;    /* hsl(0 0 0%) */
     --c-back-c1: #191919; /* hsl(0 0 10%) */
