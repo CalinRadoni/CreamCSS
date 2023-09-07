@@ -11,8 +11,8 @@ cream-card {
   flex-direction: column;
   text-align: center;
   flex: 1;
-  padding: 1rem;
   border-radius: var(--border-radius);
+  margin: 0.3rem;
 }
 
 .br-1  { border: 1px solid var(--c-outline); }
