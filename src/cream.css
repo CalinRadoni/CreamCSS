@@ -158,7 +158,6 @@ fieldset {
 
 legend {
   color: var(--c-main);
-  width: 100%;
   margin: 0.5rem 0;
   font-weight: bolder;
 }
