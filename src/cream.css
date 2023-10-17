@@ -146,7 +146,7 @@ form {
 form div {
   margin-bottom: 1rem;
 }
-form div:last-of-type {
+form div:last-child {
   margin-bottom: 0;
 }
 
