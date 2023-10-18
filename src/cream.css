@@ -209,12 +209,16 @@ input:invalid {
   border: var(--active-ind-size) solid var(--c-err);
 }
 
+form p {
+  color: var(--c-txt-dim);
+  font-size: 0.95rem;
+}
+
 /* all <p> elements that follow an <input> element, immediately or not, and both share the same parent */
 input ~ p {
   display: block;
-  color: var(--c-txt-dim);
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
 }
 
 ::placeholder {
@@ -277,9 +281,9 @@ button:hover {
     vertical-align: baseline;
     margin: 0;
   }
-  input ~ p {
-    display: inline-block;
-    margin: 0.2rem 0 0 1rem;
+  form p {
+    margin-left: calc(var(--label-width) + 1.2rem);
+    max-width: 30rem;
   }
   input[type=radio], input[type=checkbox] {
     margin-left: calc(var(--label-width) + 1.25rem + 2px);
