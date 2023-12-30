@@ -328,6 +328,17 @@ img {
   color: var(--c-main)
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  margin: 0; border: 0; padding: 0;
+}
+
 .c-main  { color: var(--c-main); }
 .c-error { color: var(--c-err); }
 .c-code  { color: var(--c-code); }
