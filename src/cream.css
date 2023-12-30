@@ -29,9 +29,9 @@
     --c-err:  var(--u-err-dark,  #FF453A);
     --c-code: var(--u-code-dark, #ffd6b3); /* hsl(28 100% 85%)) */
 
-    --c-back: #000;    /* hsl(0 0 0%) */
-    --c-back-c1: #191919; /* hsl(0 0 10%) */
-    --c-back-c2: #262626; /* hsl(0 0 15%) */
+    --c-back: #191919; /* hsl(0 0 10%) */
+    --c-back-c1: #262626; /* hsl(0 0 15%) */
+    --c-back-c2: #333333; /* hsl(0 0 20%) */
 
     --c-txt: #e6e6e6; /* hsl(0 0 90%) */
     --c-txt-dim: #a6a6a6; /* hsl(0 0 65%) */
