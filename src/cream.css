@@ -134,6 +134,7 @@ hr {
 
 pre code {
   background-color: var(--c-back-c1);
+  border: 1px solid var(--c-outline-dim);
   border-radius: var(--border-radius);
   display: block;
   overflow: auto;
