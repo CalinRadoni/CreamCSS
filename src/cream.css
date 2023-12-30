@@ -16,7 +16,7 @@
   --c-outline: #808080; /* hsl(0 0 50%) */
   --c-outline-dim: #cccccc; /* hsl(0 0 80%) */
 
-  font-size: 16px;
+  font-size: 18px;
 
   --label-width: 12rem;
   --border-radius: 10px;
@@ -94,11 +94,12 @@ article header {
   margin-top: 1.5rem;
 }
 
-p, ul, blockquote {
-  margin: 0.8rem 0;
+p, ul {
+  margin: 1rem 0;
 }
+
 blockquote {
-  margin-left: 2rem;
+  margin: 1rem 1rem 1rem 2rem;
   padding: 0.5rem 1rem;
   background-color: var(--c-back-c1);
   border-radius: var(--border-radius);
