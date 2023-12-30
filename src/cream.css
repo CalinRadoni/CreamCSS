@@ -78,8 +78,14 @@ h4 { font-size: 1rem; }
 h5 { font-size: 0.875rem; }
 h6 { font-size: 0.75rem; }
 
-h1, h2, h3, h4, h5, h6, article, section {
+h1, h2, h3, h4, h5, h6, section {
   margin-bottom: 0.5rem;
+}
+
+article {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto 0.5rem;
 }
 
 article header {
