@@ -260,6 +260,11 @@ button:hover {
   background-color: var(--c-main);
 }
 
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .col-row {
   display: flex;
   flex-direction: column;
