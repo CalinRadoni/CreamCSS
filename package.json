@@ -1,7 +1,7 @@
 {
   "name": "CreamCSS-builder",
-  "version": "2.5.0",
-  "description": "Gulp builder for CreamCSS framework",
+  "version": "2.6.0",
+  "description": "Builder for CreamCSS framework",
   "keywords": [],
   "homepage": "https://calinradoni.github.io/CreamCSS/",
   "license": "MIT",

@@ -151,21 +151,30 @@
           </fieldset>
 
           <fieldset>
-            <legend>Radio buttons and checkboxes</legend>
+            <legend>Radio buttons, checkboxes, selects</legend>
+            <div>
+              <label for="selector">Select</label>
+              <select id="selector">
+                <option value="opt0">First option</option>
+                <option value="opt1">Second option</option>
+                <option value="opt1">selected option</option>
+                <option value="opt2">... another option</option>
+              </select>
+            </div>
             <div>
               <label for="">Choose an option:</label>
               <input type="radio" id="r0" name="option_set" value="opt0">
               <label for="r0">First option</label><br>
               <input type="radio" id="r1" name="option_set" value="opt1">
-              <label for="r1">Second option</label>
+              <label for="r1">Second option</label><br>
+              <input type="radio" id="r2" name="option_set" value="opt2">
+              <label for="r2">... another option</label>
             </div>
             <div>
               <input type="checkbox" id="check0" value="c0">
               <label for="check0">A checkbox</label><br>
               <input type="checkbox" id="check1" value="c1">
-              <label for="check1">another checkbox</label><br>
-              <label for="input999">Text</label>
-              <input type="text" id="input999" name="input999" value="standard text input">
+              <label for="check1">another checkbox</label>
             </div>
           </fieldset>
 

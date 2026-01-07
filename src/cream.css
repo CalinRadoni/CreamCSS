@@ -181,8 +181,17 @@ input + label {
   margin: 0 0 0 0.5rem;
   text-align: left;
 }
+select + label {
+  display: inline;
+  margin: 0 0 0 0.5rem;
+  text-align: left;
+}
 
-input, textarea {
+select {
+  appearance: none;
+}
+
+input, textarea, select {
   display: block;
   background-color: var(--c-back-c2);
 
@@ -193,18 +202,19 @@ input, textarea {
 
   padding: 0.5rem;
 }
-input:hover, textarea:hover {
+input:hover, textarea:hover, select:hover {
   border: var(--active-ind-size) solid var(--c-outline);
 }
 input:active, input:focus, input:focus-visible,
-textarea:active, textarea:focus, textarea:focus-visible {
+textarea:active, textarea:focus, textarea:focus-visible,
+select:active, select:focus, select:focus-visible {
   border: var(--active-ind-size) solid var(--c-main);
 }
 input:read-only, textarea:read-only {
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
 }
-input:disabled, textarea:disabled {
+input:disabled, textarea:disabled, select:disabled {
   color: var(--c-txt-dim);
   background-color: var(--c-back-c1);
   border: var(--active-ind-size) solid var(--c-back-c1);
@@ -289,10 +299,13 @@ img {
     width: calc(var(--label-width) + 4rem);
   }
 
-  input, textarea {
+  input, textarea, select {
     display: inline-block;
     vertical-align: baseline;
     margin: 0;
+  }
+  select {
+    min-width: 13.5rem;
   }
   form p {
     margin-left: calc(var(--label-width) + 1.2rem);
