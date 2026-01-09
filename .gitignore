@@ -3,3 +3,6 @@
 
 # ignore node modules
 /node_modules
+
+# ignore `package-lock.json`. It is generated when building the container based on `package.json` 
+/package-lock.json
