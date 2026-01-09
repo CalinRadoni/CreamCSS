@@ -250,9 +250,18 @@ input[type=radio], input[type=checkbox] {
   height: 1.2rem;
   display: inline;
   accent-color: var(--c-main);
-
 }
 input[type=checkbox] { margin-bottom: 1rem; }
+
+input[type=radio]:disabled, input[type=checkbox]:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+input[type=radio]:disabled + label, input[type=checkbox]:disabled + label{
+  color: var(--c-txt-dim);
+  opacity: 0.5;
+}
 
 button {
   color: var(--c-main);
