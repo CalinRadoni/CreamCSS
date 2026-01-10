@@ -96,8 +96,8 @@
       </header>
       <p>The background, standard text and borders are shades of gray.</p>
       <cream-row>
-        <cream-card class="bg-m">
-          <p>Main color as background <b>bg-m</b></p>
+        <cream-card>
+          <p>Default style</p>
         </cream-card>
         <cream-card class="c-main">
           <p>Main color <b>c-main</b></p>
@@ -110,8 +110,8 @@
         </cream-card>
       </cream-row>
       <cream-row>
-        <cream-card>
-          <p>Default style</p>
+        <cream-card class="bg-m">
+          <p>Main color as background <b>bg-m</b></p>
         </cream-card>
         <cream-card class="bg-1">
           <p>Background 1 <b>bg-1</b></p>
@@ -174,17 +174,26 @@
               <label for="input4">Disabled</label>
               <input type="text" id="input4" name="input4" value="disabled text input" disabled="">
             </div>
-            <p>This is a standalone long hint, the length is limited to 30rem and the text will wrap.</p>
             <div>
-              <label for="input5">1 < length < 33</label>
-                  <input type="text" id="input5" name="input5" minlength="2" maxlength="32" value="" placeholder="abcd">
-                  <p>The length of this field must be between 2 and 32 characters</p>
+              <label for="input5">1 &lt; length &lt; 33</label>
+              <input type="text" id="input5" name="input5" minlength="2" maxlength="32" value="" placeholder="abcd">
+              <p>The length of this field must be between 2 and 32 characters.</p>
+              <p>Any <code>p</code> after an <code>input</code>, with the same parent as that <code>input</code>
+                is formatted with a smaller font and smaller top margin.</p>
             </div>
-            <p>This is another standalone long hint, the length is limited to 30rem and the text will wrap.</p>
+            <p>This is a standalone long hint, the length is limited to <code>30rem</code> and the text will wrap.</p>
             <div>
               <label for="input6">Multi-line</label>
               <textarea id="input6" name="input6" placeholder="Lorem, ... you know ..."></textarea>
             </div>
+            <details>
+              <summary>Details, click me!</summary>
+              <p>To be aligned in forms, the <code>legend</code> and <code>summary</code> are formated with a left
+                margin when screen width is at least <code>34rem</code>.</p>
+              <div>
+                <label for="email0">Email</label><input type="email" id="input0" name="email0" value="">
+              </div>
+            </details>
           </fieldset>
 
           <fieldset>

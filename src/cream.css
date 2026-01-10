@@ -164,10 +164,14 @@ fieldset {
   margin-bottom: 1rem;
 }
 
-legend {
+legend, summary {
   color: var(--c-main);
   margin: 0.5rem 0;
   font-weight: bolder;
+}
+
+summary::marker {
+  font-size: 1.4rem;
 }
 
 label {
@@ -292,7 +296,7 @@ img {
 }
 
 @media screen and (min-width: 34rem) {
-  legend {
+  legend, summary {
     margin-left: calc(var(--label-width) + 1rem);
   }
 
