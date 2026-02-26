@@ -9,16 +9,13 @@ const docsDir = 'docs/';
 
 const srcFiles = [
   srcDir + 'modern-normalize.css',
-  srcDir + 'cream.css',
-  srcDir + 'cream-extra.css'
+  srcDir + 'cream.css'
 ];
 
 // Note: if you modify the order of these elements you must modify the writeResult function !
 const outFiles = [
   'cream.min.css',
-  'cream-mn.css',
-  'cream-all.min.css',
-  'cream-all-mn.css'
+  'cream-mn.min.css'
 ];
 
 const fs = require('node:fs/promises');
@@ -84,18 +81,6 @@ async function writeResult(minimizedFiles, idx) {
       await fd.write('\n');
       await fd.write(minimizedFiles[srcFiles[1]].styles);
       break;
-    case 2:
-      await fd.write(minimizedFiles[srcFiles[1]].styles);
-      await fd.write('\n');
-      await fd.write(minimizedFiles[srcFiles[2]].styles);
-      break;
-    case 3:
-      await fd.write(minimizedFiles[srcFiles[0]].styles);
-      await fd.write('\n');
-      await fd.write(minimizedFiles[srcFiles[1]].styles);
-      await fd.write('\n');
-      await fd.write(minimizedFiles[srcFiles[2]].styles);
-      break;
   }
   await fd.close();
 }
@@ -116,7 +101,7 @@ async function build() {
       await writeResult(minimizedFiles, i);
     }
 
-    await fs.copyFile(dstDir + 'cream-all-mn.css', docsDir + 'cream-all-mn.css');
+    await fs.copyFile(dstDir + 'cream-mn.min.css', docsDir + 'cream-mn.min.css');
   }
   catch (err) {
     console.log('\nBuild error !');

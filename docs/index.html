@@ -7,7 +7,7 @@
   <meta name="description"
     content="Cream CSS framework: Lightweight, Classless*, HTML Semantic Elements, Responsive, Mobile First">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cream-all-mn.css">
+  <link rel="stylesheet" href="cream-mn.min.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
           The purpose of this framework is to be used as a starting point for web pages.
           It is mostly <b>Classless</b> so it can be used just by adding to a page's header:
         </p>
-        <pre><code>&lt;link rel="stylesheet" href="cream-mn.css"&gt;</code></pre>
+        <pre><code>&lt;link rel="stylesheet" href="cream-mn.min.css"&gt;</code></pre>
       </section>
       <header>
         <h2 class="c-main">Typography</h2>
@@ -51,15 +51,11 @@
         <p>To be sure that the look is the same in different browsers, I selected <a
             href="https://github.com/sindresorhus/modern-normalize">modern-normalize</a> to set a default starting
           style.<br>
-          The <code>dist</code> directory contains minified versions for (sizes from version 2.8.0):</p>
+          The <code>dist</code> directory contains minified versions for (sizes from version 3.0.0):</p>
         <ul>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream.min.css">CreamCSS</a> - 5.5k</li>
+          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream.min.css">CreamCSS</a> - 6.4k</li>
           <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-mn.css">CreamCSS +
-              modern-normalize</a> - 6.6k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all.min.css">CreamCSS +
-              cream-extra</a> - 6.0k</li>
-          <li><a href="https://github.com/CalinRadoni/CreamCSS/tree/main/dist/cream-all-mn.css">CreamCSS + cream-extra +
-              modern-normalize</a> - 7.2k</li>
+              modern-normalize</a> - 7.5k</li>
         </ul>
         <blockquote>
           <p>This is a <code>blockquote</code> included here for demo purposes.</p>
@@ -72,9 +68,9 @@
           <li><code>c-txt</code> and <code>c-txtd</code> for standard and dim text color</li>
           <li><code>c-main</code>, <code>c-error</code> and <code>c-code</code> to apply colors</li>
           <li><code>bg-m</code>, <code>bg-0</code>, <code>bg-1</code>, <code>bg-2</code> to set background colors</li>
-          <li>In the <code>cream-extra.css</code> file, <code>br-</code> classes for borders</li>
+          <li><code>br-</code> classes for borders</li>
         </ul>
-        <p>There are some custom HTML semantic elements in the <code>cream-extra.css</code> file:</p>
+        <p>There are two custom HTML semantic elements:</p>
         <ul>
           <li><code>cream-row</code> is a column / row responsive flex container</li>
           <li><code>cream-card</code> is a flex container with rounded corners</li>
@@ -86,8 +82,16 @@
   &lt;title&gt;Page Title&lt;/title&gt;
   &lt;meta name="description" content="Page description"&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;link rel="stylesheet" href="cream-all-mn.css"&gt;
+  &lt;link rel="stylesheet" href="cream-mn.min.css"&gt;
 &lt;/head&gt;</code></pre>
+        <details>
+          <summary>v3 breaking changes, click me!</summary>
+          <ul>
+            <li><code>cream-extra.css</code> was removed, content is included in <code>cream.css</code></li>
+            <li><code>fieldset</code> is a CSS grid.</li>
+          </ul>
+        </details>
+
       </section>
     </article>
     <article>
@@ -152,79 +156,56 @@
       </header>
       <section>
         <form>
+          <div class="legend"><legend>Text input</legend></div>
           <fieldset>
-            <legend>Text input</legend>
-            <div>
-              <label for="input0">Text</label>
-              <input type="text" id="input0" name="input0" value="standard text input">
-            </div>
-            <div>
-              <label for="input1">Password</label>
-              <input type="password" id="input1" name="input1" value="password text input">
-            </div>
-            <div>
-              <label class="c-req" for="input2">Required</label>
-              <input type="text" id="input2" name="input2" value="required text input" required>
-            </div>
-            <div>
-              <label for="input3">Read-only</label>
-              <input type="text" id="input3" name="input3" value="read-only text input" readonly="">
-            </div>
-            <div>
-              <label for="input4">Disabled</label>
-              <input type="text" id="input4" name="input4" value="disabled text input" disabled="">
-            </div>
-            <div>
-              <label for="input5">1 &lt; length &lt; 33</label>
-              <input type="text" id="input5" name="input5" minlength="2" maxlength="32" value="" placeholder="abcd">
-              <p>The length of this field must be between 2 and 32 characters.</p>
-              <p>Any <code>p</code> after an <code>input</code>, with the same parent as that <code>input</code>
-                is formatted with a smaller font and smaller top margin.</p>
-            </div>
-            <p>This is a standalone long hint, the length is limited to <code>30rem</code> and the text will wrap.</p>
-            <div>
-              <label for="input6">Multi-line</label>
-              <textarea id="input6" name="input6" placeholder="Lorem, ... you know ..."></textarea>
-            </div>
-            <details>
-              <summary>Details, click me!</summary>
-              <p>To be aligned in forms, the <code>legend</code> and <code>summary</code> are formated with a left
-                margin when screen width is at least <code>34rem</code>.</p>
-              <div>
-                <label for="email0">Email</label><input type="email" id="input0" name="email0" value="">
-              </div>
-            </details>
+            <label for="input0">Text</label>
+            <input type="text" id="input0" name="input0" value="standard text input">
+            <label for="input1">Password</label>
+            <input type="password" id="input1" name="input1" value="password text input">
+            <label class="c-req" for="input2">Required</label>
+            <input type="text" id="input2" name="input2" value="required text input" required>
+            <label for="input3">Read-only</label>
+            <input type="text" id="input3" name="input3" value="read-only text input" readonly="">
+            <label for="input4">Disabled</label>
+            <input type="text" id="input4" name="input4" value="disabled text input" disabled="">
+            <label for="input5">1 &lt; length &lt; 33</label>
+            <input type="text" id="input5" name="input5" minlength="2" maxlength="32" value="" placeholder="abcd">
+            <p class="gc2">The length of this field must be between 2 and 32 characters.</p>
+            <p class="gc2">This is a standalone long hint, or just a long paragraph of text, it should wrap.</p>
+            <label for="input6">Multi-line</label>
+            <textarea id="input6" name="input6" placeholder="Lorem, ... you know ..."></textarea>
           </fieldset>
 
+          <div class="legend"><legend>Radio buttons, checkboxes, selects</legend></div>
           <fieldset>
-            <legend>Radio buttons, checkboxes, selects</legend>
+            <label for="selector">Select</label>
+            <select id="selector">
+              <option value="opt0">First option</option>
+              <option value="opt1" disabled>disabled option</option>
+              <option value="opt2" selected>selected option</option>
+              <option value="opt3">... another option</option>
+            </select>
+            <label for="">Choose an option:</label>
             <div>
-              <label for="selector">Select</label>
-              <select id="selector">
-                <option value="opt0">First option</option>
-                <option value="opt1" disabled>disabled option</option>
-                <option value="opt2" selected>selected option</option>
-                <option value="opt3">... another option</option>
-              </select>
+              <div><input type="radio" id="r0" name="option_set"><label for="r0">First option</label></div>
+              <div><input type="radio" id="r1" name="option_set" disabled><label for="r1">disabled option</label></div>
+              <div><input type="radio" id="r2" name="option_set" checked><label for="r2">selected option</label></div>
+              <div><input type="radio" id="r3" name="option_set"><label for="r3">... another option</label></div>
             </div>
+            <label for="">Checkboxes:</label>
             <div>
-              <label for="">Choose an option:</label>
-              <input type="radio" id="r0" name="option_set"><label for="r0">First option</label><br>
-              <input type="radio" id="r1" name="option_set" disabled><label for="r1">disabled option</label><br>
-              <input type="radio" id="r2" name="option_set" checked><label for="r2">selected option</label><br>
-              <input type="radio" id="r3" name="option_set"><label for="r3">... another option</label>
-            </div>
-            <div>
-              <input type="checkbox" id="check0"><label for="check0">A checkbox</label><br>
-              <input type="checkbox" id="check1" disabled><label for="check1">disabled checkbox</label><br>
-              <input type="checkbox" id="check2" checked><label for="check2">selected checkbox</label>
+              <div><input type="checkbox" id="check0"><label for="check0">A checkbox</label></div>
+              <div><input type="checkbox" id="check1" disabled><label for="check1">disabled checkbox</label></div>
+              <div><input type="checkbox" id="check2" checked><label for="check2">selected checkbox</label></div>
             </div>
           </fieldset>
 
           <fieldset>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-            <button>Cancel</button>
+            <div class="gc2 buttons">
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+              <button>Cancel</button>
+            </div>
           </fieldset>
         </form>
       </section>

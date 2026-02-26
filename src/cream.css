@@ -18,7 +18,6 @@
 
   font-size: 18px;
 
-  --label-width: 12rem;
   --border-radius: 10px;
   --active-ind-size: 2px;
 }
@@ -67,7 +66,8 @@ footer {
 }
 
 main {
-  margin: 0 1rem;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 
 /* Correct the font size for `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
@@ -149,46 +149,50 @@ code {
 }
 
 form {
-  margin: 0 1rem;
-}
-form div {
-  margin-bottom: 1rem;
-}
-form div:last-child {
-  margin-bottom: 0;
+  max-width: 44rem;
+  width: 100%;
 }
 
 fieldset {
-  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 2px;
+  column-gap: 0.5rem;
+  width: 100%;
+  margin: 0 0 1rem;
   border: 0;
-  margin-bottom: 1rem;
 }
 
-legend, summary {
+div.legend {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+legend {
   color: var(--c-main);
-  margin: 0.5rem 0;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+summary {
   font-weight: bolder;
 }
-
 summary::marker {
   font-size: 1.4rem;
 }
 
+
 label {
-  display: block;
-  text-align: left;
-  width: 100%;
-  margin: 0 0 0.5rem;
+  justify-self: left;
+  align-self: center;
+  margin: 0.5rem 0 0 0.5rem;
+  overflow: hidden;
 }
-input + label {
-  display: inline;
-  margin: 0 0 0 0.5rem;
-  text-align: left;
-}
-select + label {
-  display: inline;
-  margin: 0 0 0 0.5rem;
-  text-align: left;
+input[type=checkbox] + label, input[type=radio] + label {
+  margin-left: 0;
+  vertical-align: middle;
 }
 
 select {
@@ -196,7 +200,6 @@ select {
 }
 
 input, textarea, select {
-  display: block;
   background-color: var(--c-back-c2);
 
   outline: none !important;
@@ -205,6 +208,8 @@ input, textarea, select {
   border-radius: var(--border-radius);
 
   padding: 0.5rem;
+  vertical-align: middle;
+  width: 100%;
 }
 input:hover, textarea:hover, select:hover {
   border: var(--active-ind-size) solid var(--c-outline);
@@ -234,13 +239,7 @@ input:invalid {
 form p {
   color: var(--c-txt-dim);
   font-size: 0.95rem;
-}
-
-/* all <p> elements that follow an <input> element, immediately or not, and both share the same parent */
-input ~ p {
-  display: block;
-  font-size: 0.85rem;
-  margin-top: 0.4rem;
+  margin: 0 0 1rem;
 }
 
 ::placeholder {
@@ -249,43 +248,113 @@ input ~ p {
 }
 
 input[type=radio], input[type=checkbox] {
-  margin: 0 0 0.5rem 1rem;
+  margin: 0.5rem;
   width: 1.2rem;
   height: 1.2rem;
-  display: inline;
   accent-color: var(--c-main);
 }
-input[type=checkbox] { margin-bottom: 1rem; }
-
 input[type=radio]:disabled, input[type=checkbox]:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
-
 input[type=radio]:disabled + label, input[type=checkbox]:disabled + label{
   color: var(--c-txt-dim);
   opacity: 0.5;
 }
 
+div.buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 button {
   color: var(--c-main);
   background-color: transparent;
   border-radius: var(--border-radius);
   border: var(--active-ind-size) solid var(--c-main);
   padding: 0.5rem 1rem;
-  margin: 0 0.5rem 0 0;
-}
-button:last-of-type {
-  margin-right: 0;
+  vertical-align: middle;
 }
 button:hover {
   color: var(--c-back);
   background-color: var(--c-main);
 }
 
+button.arrow {
+  margin: 0 0.5rem 0 0;
+  border: 0;
+  padding: 0.25rem;
+}
+button.arrow:hover {
+  background-color: transparent;
+}
+button.arrow svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  --c-svgf: var(--c-main);
+  --c-svgs: var(--c-main);
+  stroke-width: 0;
+  transition: transform 0.3s ease-in-out;
+}
+button.arrow:hover svg {
+  --c-svgf: var(--c-back);
+  stroke-width: 0.5rem;
+}
+button.arrow svg.arrow-open {
+  transform: rotate(90deg);
+}
+
+button.eye {
+  margin-left: -2rem;
+  border: 0;
+  padding: 0;
+}
+button.eye:hover {
+  background-color: transparent;
+}
+button.eye svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  --c-svgs: var(--c-main);
+  --c-svgf: var(--c-back);
+  --c-svgfm: var(--c-back);
+  --c-svgso: transparent;
+  stroke-width: 0.5rem;
+  stroke-linecap: round;
+}
+button.eye:hover svg {
+  --c-svgs: var(--c-back);
+  --c-svgf: var(--c-main);
+}
+button.eye-on svg,
+button.eye-on:hover svg {
+  --c-svgso: var(--c-main);
+}
+
+button svg {
+  vertical-align: middle;
+}
+
 img {
   max-width: 100%;
   margin: 0 auto;
+}
+
+cream-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+cream-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
+  border-radius: var(--border-radius);
+  margin: 0.3rem;
 }
 
 .col-row {
@@ -295,41 +364,27 @@ img {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 34rem) {
-  legend, summary {
-    margin-left: calc(var(--label-width) + 1rem);
+.hide {
+  display: none !important;
+}
+
+@media only screen and (min-width: 600px) {
+  fieldset {
+    grid-template-columns: 35% 65%;
+    row-gap: 0.5rem;
   }
 
   label {
-    display: inline-block;
-    text-align: right;
-    width: var(--label-width);
-    margin: 0 1rem 0 0;
-  }
-  label[for=""] {
-    display: block;
-    margin-bottom: 0.5rem;
-    width: calc(var(--label-width) + 4rem);
-  }
-
-  input, textarea, select {
-    display: inline-block;
-    vertical-align: baseline;
+    justify-self: right;
     margin: 0;
   }
-  select {
-    min-width: 13.5rem;
-  }
-  form p {
-    margin-left: calc(var(--label-width) + 1.2rem);
-    max-width: 30rem;
-  }
-  input[type=radio], input[type=checkbox] {
-    margin-left: calc(var(--label-width) + 1.25rem + 2px);
+
+  .gc2 {
+    grid-column: 2;
   }
 
-  button:first-of-type {
-    margin-left: calc(var(--label-width) + 1rem);
+  cream-row {
+    flex-direction: row;
   }
 
   .col-row {
@@ -338,11 +393,7 @@ img {
   }
 }
 
-@media screen and (min-width: 80rem) {
-  main {
-    margin: 1rem auto;
-    max-width: 80rem;
-  }
+@media only screen and (min-width: 900px) {
   header, footer {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -375,3 +426,8 @@ img {
 .bg-0 { background: var(--c-back); }
 .bg-1 { background: var(--c-back-c1); }
 .bg-2 { background: var(--c-back-c2); }
+
+.br-1  { border: 1px solid var(--c-outline); }
+.br-1d { border: 1px solid var(--c-outline-dim); }
+.br-a  { border: var(--active-ind-size) solid var(--c-outline); }
+.br-ad { border: var(--active-ind-size) solid var(--c-outline-dim); }
