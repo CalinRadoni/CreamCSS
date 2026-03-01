@@ -185,8 +185,7 @@ summary::marker {
 
 
 label {
-  justify-self: left;
-  align-self: center;
+  justify-self: start;
   margin: 0.5rem 0 0 0.5rem;
   overflow: hidden;
 }
@@ -364,6 +363,17 @@ cream-card {
   justify-content: space-between;
 }
 
+label.info {
+  margin-left: 0;
+  font-weight: bolder;
+  align-self: start;
+}
+label.title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0;
+  font-weight: bolder;
+}
+
 .hide {
   display: none !important;
 }
@@ -375,12 +385,20 @@ cream-card {
   }
 
   label {
-    justify-self: right;
+    justify-self: end;
+    align-self: center;
+    text-align: right; /* for when text wraps */
     margin: 0;
+  }
+  label.title {
+    justify-self: center;
   }
 
   .gc2 {
     grid-column: 2;
+  }
+  .gcs2 {
+    grid-column: 1 / span 2;
   }
 
   cream-row {
